@@ -1,0 +1,331 @@
+@charset "UTF-8";
+@media (max-width: 767px) {
+  .header__logo {
+    opacity: 0;
+  }
+}
+
+.mv {
+  position: fixed;
+  z-index: -2;
+  width: 100%;
+  top: 0px;
+  height: 700px;
+}
+.mv__inner {
+  position: relative;
+}
+.mv__logo {
+  position: absolute;
+  top: 250px;
+  left: 5%;
+  width: 351px;
+}
+@media (max-width: 767px) {
+  .mv__logo {
+    position: inherit;
+    max-width: 80%;
+    top: 100px;
+  }
+}
+.mv__img {
+  top: 300px;
+  right: 0;
+  position: absolute;
+  width: 100%;
+  height: 600px;
+  background: url(../img/fv.png) no-repeat right bottom/contain;
+}
+@media (max-width: 767px) {
+  .mv__img {
+    background: url(../img/fv_sp.png) no-repeat right top/contain;
+    top: 80px;
+    position: inherit;
+    height: 1000px;
+    width: 100vw;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
+.about {
+  margin-top: min(1000px, 101svh);
+}
+.about__img {
+  width: 167px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.works__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 800px;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 100px;
+  padding-top: 20px;
+}
+@media (max-width: 767px) {
+  .works__inner {
+    margin-bottom: 80px;
+  }
+}
+.works__item {
+  background: #fff;
+  width: 344px;
+  border-radius: 30px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.works__txt {
+  padding: 24px 20px 28px;
+}
+.works__tag {
+  font-size: 12px;
+  font-weight: bold;
+  color: #777;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+.works__ttl {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.works__cap {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* 非表示案件とモーダル */
+.modal {
+  opacity: 0;
+  display: none;
+  -webkit-transition: 0.3s opacity ease;
+  transition: 0.3s opacity ease;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modal__content {
+  background: white;
+  padding: 110px 20px;
+  border-radius: 30px;
+  text-align: center;
+  max-width: 90vw;
+  width: 700px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.modal__ttl {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 26px;
+}
+.modal__txt {
+  margin-bottom: 28px;
+}
+.modal #submitPassword {
+  margin-top: 50px;
+}
+.modal #passwordClose {
+  display: block;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background: #000;
+  color: #fff;
+  padding: 0;
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 300;
+  width: 50px;
+  height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.modal #passwordClose::after {
+  content: "×";
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  line-height: 1;
+}
+@media (max-width: 767px) {
+  .modal #passwordClose {
+    font-size: 40px;
+    width: 45px;
+    height: 45px;
+    right: -12px;
+  }
+}
+
+.ct__form {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: bold;
+  width: 100%;
+  max-width: 530px;
+  padding-top: 20px;
+}
+@media (max-width: 767px) {
+  .ct__form {
+    padding-top: 10px;
+  }
+}
+.ct__form label {
+  width: 100%;
+  max-width: 530px;
+  margin-bottom: 33px;
+}
+
+.must {
+  position: relative;
+  font-weight: inherit;
+}
+.must::after {
+  position: absolute;
+  content: "必須";
+  margin-left: 20px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-wrap: nowrap;
+  color: #fff;
+  background: #43A1FF;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  font-size: 10px;
+}
+
+.rd__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 70px 30px;
+  width: 728px;
+  max-width: 90%;
+  margin: auto;
+}
+@media (max-width: 767px) {
+  .rd__inner {
+    gap: 40px 10%;
+    max-width: 92%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.rd__item {
+  text-align: center;
+  height: 240px;
+  display: block;
+}
+@media (max-width: 767px) {
+  .rd__item {
+    width: 140px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.rd__name {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.8;
+  margin-top: 4px;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.onlySP {
+  display: none;
+}
+@media (max-width: 767px) {
+  .onlySP {
+    display: block;
+  }
+}
+
+.onlyPC {
+  display: block;
+}
+@media (max-width: 767px) {
+  .onlyPC {
+    display: none;
+  }
+}

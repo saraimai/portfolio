@@ -1,0 +1,344 @@
+$bg: #F2F7FF;
+$bg40: #F2F7FF66; //40%
+$bg20: #F2F7FF33; //20%
+
+$bg-white: #FFFFFF;
+
+$pr: #43A1FF;
+
+$tag-color: #777;
+$text-main: #333;
+
+
+$breakpoints: (
+    //キー : 値
+    'sp': "(max-width: 767px)",
+    // 'tab': "(min-width: 768px) and (max-width: 900px)",
+    'pc': "(min-width: 768px)"
+    ) !default;
+
+
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+.header__logo {
+    @include mq() {
+        opacity: 0;
+    }
+}
+
+.mv {
+    position: fixed;
+    z-index: -2;
+    width: 100%;
+    top: 0px;
+    height: 700px;
+
+
+    &__inner {
+        position: relative;
+    }
+
+    &__logo {
+        position: absolute;
+        top: 250px;
+        left: 5%;
+        width: 351px;
+
+        @include mq(sp) {
+            position: inherit;
+            max-width: 80%;
+            top: 100px;
+        }
+    }
+
+    &__img {
+        top: 300px;
+        right: 0;
+        position: absolute;
+        width: 100%;
+        height: 600px;
+        background: url(../img/fv.png)no-repeat right bottom/contain;
+
+        @include mq(sp) {
+            background: url(../img/fv_sp.png)no-repeat right top/contain;
+            top: 80px;
+            position: inherit;
+            height: 1000px;
+            width: 100vw;
+            left: 50%;
+            transform: translate(-50%, 0
+            );
+    }
+}
+}
+
+
+.about {
+    margin-top: min(1000px, 101svh);
+
+    &__img {
+        width: 167px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
+
+.works {
+    &__inner {
+        display: flex;
+        max-width: 800px;
+        margin: auto;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin-bottom: 100px;
+        padding-top: 20px;
+
+        @include mq() {
+            margin-bottom: 80px;
+        }
+    }
+
+    &__item {
+        background: #fff;
+        width: 344px;
+        border-radius: 30px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    &__txt {
+        padding: 24px 20px 28px;
+    }
+
+    &__tag {
+        font-size: 12px;
+        font-weight: bold;
+        color: $tag-color;
+        display: flex;
+        gap: 20px;
+        line-height: 1.1;
+        margin-bottom: 6px;
+    }
+
+    &__ttl {
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 16px;
+
+    }
+
+    &__cap {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+}
+
+
+
+
+
+/* 非表示案件とモーダル */
+.modal {
+    //op0とdisplaynoneセットじゃないとフェードインしない
+    opacity: 0;
+    display: none;
+    transition: 0.3s opacity ease;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        background: white;
+        padding: 110px 20px;
+        border-radius: 30px;
+        text-align: center;
+        max-width: 90vw;
+        width: 700px;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__ttl {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 26px;
+    }
+
+    &__txt {
+        margin-bottom: 28px;
+    }
+
+    #submitPassword {
+        margin-top: 50px;
+    }
+
+    #passwordClose {
+        display: block;
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        background: #000;
+        color: #fff;
+        padding: 0;
+        font-size: 44px;
+        line-height: 1;
+        font-weight: 300;
+        width: 50px;
+        height: 50px;
+        max-width: 50px;
+        max-height: 50px;
+        border: none;
+        border-radius: 100px;
+        cursor: pointer;
+
+        &::after {
+            content: "×";
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            line-height: 1;
+        }
+
+        @include mq() {
+            font-size: 40px;
+            width: 45px;
+            height: 45px;
+            right: -12px;
+        }
+    }
+}
+
+
+
+
+
+.ct {
+    &__form {
+        margin: auto;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        width: fit-content;
+        font-size: 15px;
+        line-height: 1;
+        font-weight: bold;
+        width: 100%;
+        max-width: 530px;
+        padding-top: 20px;
+
+        @include mq() {
+            padding-top: 10px;
+        }
+
+        & label {
+            width: 100%;
+            max-width: 530px;
+            margin-bottom: 33px;
+        }
+    }
+}
+
+.must {
+    position: relative;
+    font-weight: inherit;
+
+    &::after {
+        position: absolute;
+        content: "必須";
+        margin-left: 20px;
+        padding: 4px 8px;
+        border-radius: 4px;
+        text-wrap: nowrap;
+        color: #fff;
+        background: $pr;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+        font-size: 10px;
+    }
+}
+
+.rd {
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 70px 30px;
+        width: 728px;
+        max-width: 90%;
+        margin: auto;
+
+        @include mq(sp) {
+            gap: 40px 10%;
+            max-width: 92%;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        text-align: center;
+        height: 240px;
+        display: block;
+
+        @include mq(sp) {
+            width: 140px;
+            height: fit-content;
+        }
+
+    }
+
+
+    &__name {
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 1.8;
+        margin-top: 4px;
+        overflow: hidden;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+}
+
+
+
+
+
+.onlySP {
+    display: none;
+
+    @include mq() {
+        display: block;
+    }
+}
+
+.onlyPC {
+    display: block;
+
+    @include mq() {
+        display: none;
+    }
+}

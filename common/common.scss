@@ -1,0 +1,623 @@
+$bg: #F2F7FF;
+$bg40: #F2F7FF66; //40%
+$bg20: #F2F7FF33; //20%
+
+$bg-white: #FFFFFF;
+
+$pr: #43A1FF;
+
+$text-main: #333;
+
+$breakpoints: (
+  //キー : 値
+  'sp': "(max-width: 767px)",
+  'tab': "(min-width: 768px) and (max-width: 900px)",
+  'pc': "(min-width: 901px)"
+  ) !default;
+
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+
+
+/* font */
+@font-face {
+  font-family: "inter";
+  src: url("../font/Inter_18pt-Regular.ttf") format("truetype"
+  );
+font-weight: 300;
+font-style: normal;
+}
+
+@font-face {
+  font-family: "inter";
+  src: url("../font/Inter_18pt-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "inter";
+  src: url("../font/Inter_18pt-SemiBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "inter";
+  src: url("../font/Inter_18pt-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+/* 文字 */
+body {
+  color: $text-main;
+  font-family: inter, sans-serif;
+  font-weight: normal;
+  line-height: 200%;
+  background: $bg;
+  font-size: 16px;
+
+  @include mq(sp) {
+    font-size: 13px;
+  }
+}
+
+.en {
+  letter-spacing: 0.05em;
+}
+
+/* 画像 */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* リンク */
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    opacity: 0.7;
+    transition: 0.4s ease opacity;
+    cursor: pointer;
+  }
+}
+
+a.opacityNone:hover {
+  opacity: 1;
+}
+
+
+/* 画面幅 */
+.container,
+header {
+  width: 92%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+.header {
+  border: 1px solid #FFFFFF;
+  background: $bg40;
+  filter: drop-shadow(16px 25px 14px rgba(0, 0, 0, 0.10));
+  backdrop-filter: blur(2.5px);
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 100px;
+  z-index: 4;
+
+  @include mq() {
+    border: none;
+    font: none;
+    background: transparent;
+    backdrop-filter: none;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 92%;
+    margin: auto;
+    padding: 20px 0;
+
+    @include mq() {
+      padding: 0;
+    }
+  }
+
+  &__logo {
+    width: 140px;
+  }
+
+  &__right {
+    display: flex;
+    gap: 40px;
+    justify-content: end;
+
+    a {
+      padding: 4px;
+      font-weight: bold;
+      width: fit-content;
+      font-size: 16px;
+    }
+
+    @include mq() {
+      display: none;
+    }
+  }
+
+  &__ber {
+    width: 45px;
+    height: 38px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+
+    &--1,
+    &--2,
+    &--3 {
+      position: absolute;
+      width: 35px;
+      height: 2px;
+      border-radius: 2px;
+      content: "";
+      right: 0;
+      background: $pr;
+    }
+
+    &--1 {
+      top: 8px;
+    }
+
+    &--2 {
+      top: 18px;
+      width: 28px;
+    }
+
+    &--3 {
+      top: 28px;
+      width: 20px;
+    }
+  }
+}
+
+@include mq() {
+
+  .drawer {
+    background: $pr;
+    width: 80vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    right: -100vw;
+    opacity: 0;
+    transition: right 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1); // アニメーションの最初を速く、後で遅く
+
+    &.active {
+      right: 0vw;
+      opacity: 1;
+      transition: right 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1); // アニメーションの最初を速く、後で遅く
+
+    }
+
+    &::after {
+      position: absolute;
+      left: -50px;
+      content: "";
+      width: 50px;
+      height: 50px;
+      background: url(../img/close.png)no-repeat center center/contain;
+      top: 20px;
+      pointer-events: none;
+    }
+
+    &__inner {
+      padding-top: 120px;
+      padding-left: 20%;
+      color: #fff;
+    }
+
+    &__ttl {
+      font-weight: bold;
+      font-size: 34px;
+      margin-bottom: 45px;
+      display: block;
+    }
+
+    &__items {
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: fit-content;
+
+      a {
+        padding: 10px;
+        font-weight: bold;
+      }
+    }
+
+    &__bg {
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      background: $bg40;
+      backdrop-filter: blur(6px);
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      transition: opacity 0.8s, visibility 1s 0.5s;
+      left: 0;
+      z-index: 4;
+
+      &.active {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s;
+      }
+    }
+  }
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: bold;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  margin-bottom: 50px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  padding-top: 120px;
+
+  @include mq(sp) {
+    font-size: 40px;
+    margin-bottom: 40px;
+    padding-top: 60px;
+  }
+
+  span {
+    font-size: 18px;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 24px;
+
+    @include mq(sp) {
+      font-size: 13px;
+    }
+  }
+
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 180%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #333333;
+  margin-bottom: 36px;
+
+  @include mq () {
+    font-size: 18px;
+  }
+}
+
+h4 {
+  font-weight: bold;
+  padding-top: 80px;
+  margin-bottom: 6px;
+
+  @include mq () {
+    padding-top: 40px;
+  }
+}
+
+section {
+  margin-bottom: 300px;
+
+  @include mq() {
+    margin-bottom: 170px;
+  }
+}
+
+.sections {
+  border-radius: 30px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include mq(tab) {
+      flex-direction: column;
+    }
+
+    @include mq(sp) {
+      flex-direction: column;
+    }
+  }
+
+  &__column {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__box {
+    background: $bg-white;
+    padding: 0 5% 100px;
+    box-shadow: 20px 30px 15px rgba(53, 56, 86, 0.13);
+    border-radius: 30px;
+
+    @include mq(sp) {
+      padding: 0 5% 50px;
+    }
+  }
+
+  &__listOuter {
+    display: flex;
+    justify-content: center;
+    align-content: start;
+    align-items: start;
+    gap: 60px;
+
+    @include mq (sp) {
+      flex-direction: column;
+      gap: 0;
+      margin-left: 20px;
+    }
+  }
+
+  &__list {
+    margin-top: 40px;
+
+    &--ttl {
+      background: $pr;
+      padding: 2px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      color: #FFFFFF;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    & li {
+      font-weight: bold;
+    }
+  }
+}
+
+.shadow {
+  box-shadow: 20px 25px 15px rgba(53, 56, 86, 0.13);
+
+}
+
+.btn {
+  background: $pr;
+  color: #FFFFFF;
+  font-size: 18px;
+  padding: 10px;
+  width: fit-content;
+  margin: auto;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  position: relative;
+  border: none;
+  cursor: pointer;
+
+
+  &__arrow {
+    background: $pr;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 10px 40px 10px 30px;
+    width: fit-content;
+    margin: auto;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    position: relative;
+
+    &::after {
+      content: "▶︎";
+      font-size: 9px;
+      right: 16px;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+
+  &__work {
+    display: block;
+    margin: 200px auto 0;
+    text-align: center;
+    width: fit-content;
+
+    @include mq() {
+      margin-top: 100px;
+    }
+  }
+}
+
+
+//問い合わせフォーム送信ボタン、パスワード送信ボタン
+input[type="submit"],
+#submitPassword {
+  background: $pr;
+  color: #FFFFFF;
+  font-size: 18px;
+  padding: 10px;
+  width: fit-content;
+  margin: auto;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+
+
+//問い合わせフォーム、パスワード
+input[type="text"],
+input[type="email"],
+textarea,
+input[type="password"] {
+  border: none;
+  width: 100%;
+  max-width: 530px;
+  background: $bg;
+  padding: 17px 20px;
+  margin-top: 12px;
+}
+
+textarea {
+  min-height: 140px;
+  min-width: 100%;
+  width: 100% !important;
+  max-width: 530px;
+}
+
+//プレースホルダー分割して書く
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: $text-main;
+  opacity: 0.26;
+}
+
+input:-moz-placeholder,
+textarea::-moz-placeholder {
+  color: $text-main;
+  opacity: 0.26;
+}
+
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: $text-main;
+  opacity: 0.26;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: $text-main;
+  opacity: 0.26;
+}
+
+
+.footer {
+  padding: 65px 50px 20px;
+  background: $pr;
+  color: $bg-white;
+
+  @include mq() {
+    padding: 65px 10px 20px;
+  }
+
+  &__logo {
+    width: 160px;
+    height: 69px;
+    margin-bottom: 42px;
+    display: block;
+  }
+
+  &__inner {
+    padding-left: 40px;
+    font-size: 13px;
+
+    @include mq() {
+      padding-left: 20px;
+    }
+
+    & a {
+      font-weight: bolder;
+      line-height: 1;
+      padding: 5px;
+      width: fit-content;
+    }
+  }
+
+  &__link {
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 85px;
+    font-size: 16px;
+  }
+
+  &__copy {
+    display: block;
+    color: $bg-white;
+    opacity: 0.5;
+    font-size: 10px;
+  }
+}
+
+
+
+.logo_fadein {
+  background: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+}
+
+.logo_fadein p {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 9999;
+  max-width: 280px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.bg {
+  backdrop-filter: blur(16px);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0;
+}
+
+strong {
+  color: $pr;
+  position: relative;
+  z-index: 1;
+}

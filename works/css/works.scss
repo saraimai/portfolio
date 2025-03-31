@@ -1,0 +1,332 @@
+$bg: #F2F7FF;
+$bg40: #F2F7FF66; //40%
+$bg20: #F2F7FF33; //20%
+
+$bg-white: #FFFFFF;
+
+$pr: #43A1FF;
+
+$tag-color: #777;
+$text-main: #333;
+
+
+$breakpoints: (
+    //キー : 値
+    'sp': "(max-width: 767px)",
+    // 'tab': "(min-width: 768px) and (max-width: 900px)",
+    'pc': "(min-width: 768px)"
+    ) !default;
+
+
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+article {
+    margin-top: 200px;
+
+    @include mq() {
+        margin-top: 140px;
+    }
+}
+
+.works {
+    &__switch {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        background: $bg;
+        width: fit-content;
+        border-radius: 100px;
+        padding: 8px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+            -5px -8px 12px rgba(255, 255, 255, 0.8
+        );
+    color: #fff;
+    margin-bottom: 74px;
+    position: relative;
+    z-index: 0;
+
+    @include mq () {
+        margin-bottom: 50px;
+    }
+}
+
+&__switchTxt {
+    font-size: 20px;
+    font-weight: bold;
+    color: $pr;
+    border-radius: 100px;
+    text-align: center;
+    width: 140px;
+    padding: 6px;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+
+    @include mq () {
+        font-size: 16px;
+        width: 110px;
+    }
+}
+
+//スイッチallが選択されている時
+&__switch:has(#all:checked) {
+    & .works__switchTxt:nth-child(1) {
+        color: #fff;
+        transition: color ease-in-out 0.3s, transform ease-in-out 0.3s, left ease-in-out 0.3s;
+        z-index: 2;
+    }
+
+    &::after {
+        content: "";
+        background: $pr;
+        color: #fff;
+        width: 140px;
+        height: calc(100% - 10px);
+        border-radius: 100px;
+        position: absolute;
+        z-index: 0;
+        left: 7px;
+        transform: translateY(-50%);
+        top: 50%;
+        z-index: 0;
+        transition: color ease-in-out 0.3s, transform ease-in-out 0.3s, left ease-in-out 0.3s;
+
+        @include mq() {
+            width: 110px;
+        }
+    }
+}
+
+//スイッチdesignが選択されている時
+&__switch:has(#design:checked) {
+    & .works__switchTxt:nth-child(2) {
+        color: #fff;
+        transition: color ease-in-out 0.3s, transform ease-in-out 0.3s, left ease-in-out 0.3s;
+        z-index: 2;
+    }
+
+    &::after {
+        content: "";
+        background: $pr;
+        color: #fff;
+        width: 140px;
+        height: calc(100% - 10px);
+        border-radius: 100px;
+        position: absolute;
+        z-index: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        z-index: 0;
+        transition: color ease-in-out 0.3s, transform ease-in-out 0.3s, left ease-in-out 0.3s;
+
+
+        @include mq() {
+            width: 110px;
+        }
+    }
+}
+
+//スイッチcodingが選択されている時
+&__switch:has(#coding:checked) {
+    & .works__switchTxt:nth-child(3) {
+        color: #fff;
+        transition: color ease-in-out 0.3s;
+        z-index: 2;
+    }
+
+    &::after {
+        content: "";
+        background: $pr;
+        color: #fff;
+        width: 140px;
+        height: calc(100% - 10px);
+        border-radius: 100px;
+        position: absolute;
+        z-index: 0;
+        left: calc(100% - 140px - 7px);
+        transform: translate(0, -50%);
+        top: 50%;
+        z-index: 0;
+        transition: color ease-in-out 0.3s, transform ease-in-out 0.3s, left ease-in-out 0.3s;
+
+        @include mq() {
+            width: 110px;
+            left: calc(100% - 110px - 7px);
+        }
+    }
+}
+
+input {
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+}
+
+
+&__inner {
+    display: flex;
+    max-width: 800px;
+    margin: auto;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+
+&__item {
+    background: #fff;
+    width: 344px;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+&__txt {
+    padding: 24px 20px 28px;
+}
+
+&__tag {
+    font-size: 12px;
+    font-weight: bold;
+    color: $tag-color;
+    display: flex;
+    gap: 20px;
+    line-height: 1.1;
+    margin-bottom: 6px;
+}
+
+&__ttl {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px;
+
+}
+
+&__cap {
+    font-size: 13px;
+    line-height: 1.8;
+}
+}
+
+.sorry {
+    text-align: center;
+    margin-top: 160px;
+
+    &__img {
+        width: 120px;
+        height: 120px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    &__txt {
+        font-size: 13px;
+        margin-bottom: 50px;
+    }
+}
+
+/* 非表示案件とモーダル */
+.modal {
+    //op0とdisplaynoneセットじゃないとフェードインしない
+    opacity: 0;
+    display: none;
+    transition: 0.3s opacity ease;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        background: white;
+        padding: 110px 20px;
+        border-radius: 30px;
+        text-align: center;
+        max-width: 90vw;
+        width: 700px;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__ttl {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 26px;
+    }
+
+    &__txt {
+        margin-bottom: 28px;
+    }
+
+    #submitPassword {
+        margin-top: 50px;
+    }
+
+    #passwordClose {
+        display: block;
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        background: #000;
+        color: #fff;
+        font-size: 44px;
+        line-height: 1;
+        font-weight: 300;
+        width: 50px;
+        height: 50px;
+        max-width: 50px;
+        max-height: 50px;
+        padding: 0;
+        border: none;
+        border-radius: 100px;
+        cursor: pointer;
+
+        @include mq() {
+            font-size: 40px;
+            width: 45px;
+            height: 45px;
+            right: -12px;
+        }
+
+        &::after {
+            content: "×";
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            line-height: 1;
+        }
+    }
+
+}
+
+.onlySP {
+    display: none;
+
+    @include mq() {
+        display: block;
+    }
+}
+
+.onlyPC {
+    display: block;
+
+    @include mq() {
+        display: none;
+    }
+}

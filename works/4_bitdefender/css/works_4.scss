@@ -1,0 +1,131 @@
+$bg: #F2F7FF;
+$bg40: #F2F7FF66; //40%
+$bg20: #F2F7FF33; //20%
+
+$bg-white: #FFFFFF;
+
+$pr: #43A1FF;
+
+$tag-color: #777;
+$text-main: #333;
+
+
+$breakpoints: (
+    //キー : 値
+    'sp': "(max-width: 767px)",
+    'tab': "(min-width: 768px) and (max-width: 900px)",
+    'pc': "(min-width: 901px)"
+    ) !default;
+
+
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+
+.mv {
+    position: fixed;
+    z-index: -2;
+    width: 100%;
+    top: 0px;
+    height: 700px;
+
+    &__inner {
+        position: relative;
+    }
+
+    &__logo {
+        width: 300px;
+        top: min(50vh, 500px
+        );
+    position: absolute;
+    left: 5%;
+    z-index: 1;
+    font-size: 30px;
+    font-weight: bold;
+
+    @include mq(sp) {
+        top: calc(50svh - 35vw);
+        left: 50%;
+        width: fit-content;
+        transform: translate(-50%, 0);
+    }
+
+}
+
+&__txt {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 2;
+    margin-top: 20px;
+    font-weight: normal;
+
+    @include mq(sp) {
+        padding-left: 0;
+        text-wrap: nowrap;
+        font-size: 10px;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+&__img {
+    top: 100px;
+    right: 0;
+    width: calc(100% - 145px);
+    max-width: 900px;
+    position: absolute;
+    height: calc(100svh - 50px);
+    max-height: 1000px;
+    background: url(../img/works4_fv.png)no-repeat center center/contain;
+    transform: translate(0, 0);
+
+    @include mq(sp) {
+        position: absolute;
+        right: 50%;
+        transform: translate(45%, -50%);
+        width: 110vw;
+        background-position: center center;
+        max-width: none;
+        height: 100svh;
+        top: calc(50svh + 100px);
+    }
+}
+}
+
+
+.overview {
+    margin-top: min(1000px, 101svh);
+}
+
+.pt {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+
+    &.sections__box {
+        margin-bottom: 0;
+    }
+}
+
+
+.onlySP {
+    display: none;
+
+    @include mq() {
+        display: block;
+    }
+}
+
+.onlyPC {
+    display: block;
+
+    @include mq() {
+        display: none;
+    }
+}
