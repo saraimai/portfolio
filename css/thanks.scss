@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+
+body {
+    position: relative;
+    width: 100vw;
+    height: 100svh;
+}
+
+.thanks {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &__box {
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    &__txt {
+        margin-bottom: 30px;
+    }
+}
