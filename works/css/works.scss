@@ -169,12 +169,21 @@ input {
 
 &__inner {
     display: flex;
-    max-width: 800px;
+    max-width: 760px;
     margin: auto;
-    justify-content: center;
-    gap: 40px;
+    justify-content: space-between;
+    gap: 70px 40px;
     flex-wrap: wrap;
     margin-bottom: 80px;
+
+    @include mq() {
+        margin-bottom: 0px;
+        gap: 40px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
 
 &__item {
@@ -185,7 +194,6 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
 &__txt {
@@ -218,6 +226,10 @@ input {
 .sorry {
     text-align: center;
     margin-top: 160px;
+
+    @include mq() {
+        margin-top: 100px;
+    }
 
     &__img {
         width: 120px;

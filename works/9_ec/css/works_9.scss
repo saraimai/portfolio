@@ -1,0 +1,149 @@
+$bg: #F2F7FF;
+$bg40: #F2F7FF66; //40%
+$bg20: #F2F7FF33; //20%
+
+$bg-white: #FFFFFF;
+$bg-blue: #F4F9FF;
+
+$pr: #43A1FF;
+
+$tag-color: #777;
+$text-main: #333;
+
+
+$breakpoints: (
+    //キー : 値
+    'sp': "(max-width: 767px)",
+    'tab': "(min-width: 768px) and (max-width: 900px)",
+    'pc': "(min-width: 901px)"
+    ) !default;
+
+
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+.img-top {
+    margin-top: 40px;
+}
+
+.mv {
+    position: fixed;
+    z-index: -2;
+    width: 100%;
+    top: 0px;
+    height: 700px;
+
+    &__inner {
+        position: relative;
+    }
+
+    &__logo {
+        width: fit-content;
+        top: 500px;
+        position: absolute;
+        right: 5%;
+        z-index: 1;
+
+        @include mq(tab) {
+            top: 70svh;
+            width: 270px;
+        }
+
+        @include mq(sp) {
+            width: 140px;
+            font-size: 10px;
+            top: 80svh;
+            right: 10%;
+            transform: translate(0, -50%
+            );
+    }
+}
+
+&__txt {
+    display: inline-block;
+    line-height: 2;
+    margin-top: 6px;
+
+    @include mq(sp) {
+        padding-left: 0;
+    }
+}
+
+&__img {
+    position: fixed;
+    width: 1100px;
+    min-height: 120vh;
+    right: calc((100vw - 900px)/2 + 300px);
+    top: -80px;
+    background: url(../img/works_fv.png)no-repeat top right/cover;
+
+    @include mq(sp) {
+        position: fixed;
+        width: calc(100% - 80px);
+        left: -0%;
+        height: 100vh;
+        top: -120px;
+        background: url(../img/works_fv.png)no-repeat top right/cover;
+        top: 0;
+    }
+}
+}
+
+.sections__listOuter {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    margin: auto;
+    width: fit-content;
+    gap: 0 80px;
+}
+
+.ov {
+    margin-top: min(1000px, 101svh);
+}
+
+h5 {
+    font-weight: bold;
+}
+
+h3 {
+    margin-top: 80px;
+
+    @include mq() {
+        margin-top: 40px;
+    }
+}
+
+
+
+.container {
+    @include mq() {
+        width: 100%;
+    }
+}
+
+.sections__box {
+    @include mq() {
+        border-radius: 0;
+    }
+}
+
+.onlySP {
+    display: none;
+
+    @include mq() {
+        display: block;
+    }
+}
+
+.onlyPC {
+    display: block;
+
+    @include mq() {
+        display: none;
+    }
+}

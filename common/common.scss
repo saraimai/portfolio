@@ -34,14 +34,14 @@ font-style: normal;
 
 @font-face {
   font-family: "inter";
-  src: url("../font/Inter_18pt-Medium.ttf") format("truetype");
+  src: url("../font/Inter_18pt-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "inter";
-  src: url("../font/Inter_18pt-SemiBold.ttf") format("truetype");
+  src: url("../font/Inter_18pt-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
@@ -103,6 +103,14 @@ header {
   max-width: 1000px;
   margin: auto;
 }
+
+
+.sections .container {
+  @include mq() {
+    width: 100%;
+  }
+}
+
 
 
 .header {
@@ -369,6 +377,7 @@ section {
 
     @include mq(sp) {
       padding: 0 5% 50px;
+      border-radius: 0;
     }
   }
 
@@ -417,15 +426,15 @@ section {
   padding: 10px;
   width: fit-content;
   margin: auto;
-  width: 200px;
+  width: 208px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100px;
   position: relative;
   border: none;
+  display: inline-block;
   cursor: pointer;
-
 
   &__arrow {
     background: $pr;
@@ -440,6 +449,7 @@ section {
     justify-content: center;
     border-radius: 100px;
     position: relative;
+
 
     &::after {
       content: "▶︎";
@@ -459,6 +469,17 @@ section {
 
     @include mq() {
       margin-top: 100px;
+    }
+  }
+
+  &__border {
+    background: #fff;
+    border: 1px solid $pr;
+    color: $pr;
+    margin-top: 40px;
+
+    @include mq() {
+      font-size: 13px;
     }
   }
 }

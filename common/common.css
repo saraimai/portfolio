@@ -8,13 +8,13 @@
 }
 @font-face {
   font-family: "inter";
-  src: url("../font/Inter_18pt-Medium.ttf") format("truetype");
+  src: url("../font/Inter_18pt-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "inter";
-  src: url("../font/Inter_18pt-SemiBold.ttf") format("truetype");
+  src: url("../font/Inter_18pt-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
@@ -71,6 +71,12 @@ header {
   width: 92%;
   max-width: 1000px;
   margin: auto;
+}
+
+@media (max-width: 767px) {
+  .sections .container {
+    width: 100%;
+  }
 }
 
 .header {
@@ -373,6 +379,7 @@ section {
 @media (max-width: 767px) {
   .sections__box {
     padding: 0 5% 50px;
+    border-radius: 0;
   }
 }
 .sections__listOuter {
@@ -429,7 +436,7 @@ section {
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
-  width: 200px;
+  width: 208px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -442,6 +449,7 @@ section {
   border-radius: 100px;
   position: relative;
   border: none;
+  display: inline-block;
   cursor: pointer;
 }
 .btn__arrow {
@@ -486,6 +494,17 @@ section {
 @media (max-width: 767px) {
   .btn__work {
     margin-top: 100px;
+  }
+}
+.btn__border {
+  background: #fff;
+  border: 1px solid #43A1FF;
+  color: #43A1FF;
+  margin-top: 40px;
+}
+@media (max-width: 767px) {
+  .btn__border {
+    font-size: 13px;
   }
 }
 

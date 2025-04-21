@@ -1,5 +1,17 @@
 @charset "UTF-8";
 @media (max-width: 767px) {
+  .sections .container {
+    width: 92%;
+  }
+}
+
+@media (max-width: 767px) {
+  .sections__box {
+    border-radius: 30px;
+  }
+}
+
+@media (max-width: 767px) {
   .header__logo {
     opacity: 0;
   }
@@ -43,7 +55,7 @@
     position: inherit;
     height: 1000px;
     width: 100vw;
-    left: 50%;
+    left: 52%;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
   }

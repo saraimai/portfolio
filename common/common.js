@@ -51,7 +51,7 @@ $(window).on('scroll', function () {
     var windowHeight = $(window).height();
 
     // 100vh + 500pxに達した時点でopacityが1になるように計算
-    var opacity = Math.min((scrollTop - windowHeight) / 500, 1); // 100vh + 500pxで1に達し、それ以上は1
+    var opacity = Math.min((scrollTop - windowHeight + 300) / 500, 1); // 100vh + 500pxで1に達し、それ以上は1
 
     // class="bg"の要素に対してopacityを設定
     $('.bg').css('opacity', opacity);

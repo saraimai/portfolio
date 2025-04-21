@@ -6,9 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mai | UIデザイナー | Web・アプリデザインのポートフォリオ 制作実績ページ ファッションアプリ</title>
     <meta name="description" content="マーケティング、UIUXデザイン、開発のスキルをもつデザイナーが、個人対応で成果に貢献するデザインをいたします。">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet"
+        media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="/common/reset.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="/common/common.css">
-    <link rel="stylesheet" href="css/works_1.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/works_1.css">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" defer
+        type="text/javascript"></script>
+
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVZ4JNZ2L9"></script>
@@ -74,28 +82,52 @@
             </section>
             <div class="sections">
                 <div class="container">
-                    <section id="ov" class="overview sections__box">
+                    <section id="ov" class="ov sections__box">
                         <h2>Overview<span>概要</span></h2>
-                        <p class="sections__txt">このアプリは、クライアントとコーディネーターをマッチングさせ、「似合う服がわからない」という悩みを解決することを目的としています。<br>
-                            ファッションに関する相談をしたいけれど、どこに頼んで良いか分からないというユーザーに、コーディネーターが個別に対応し、スタイルに合った服を提案します。<br>
-                            既存のコーディネートサービスではコーディネーターを選べない、価格が高いなどの課題がありますが、このアプリは多数のコーディネーターの中からテイスト、価格などをもとに比較し、依頼先を選ぶことができます。また、コーディネーターは仕事柄待ち時間が多いため、そのスキマ時間に副業として活用できるような仕組みを目指しています。<br><br>
-
-                            デザイン面では、クライアント側は明るく可愛らしいデザイン、コーディネーター側はアプリ自体の雰囲気は残しながらも、クライアントよりスタイリッシュなデザインを採用しています。これにより、双方にとって使いやすく、ストレスのないデザインになるようにしました。<br>
-                            また、ロゴやアプリアイコンに親しみやすさを込め、ユーザーが安心して利用できるようにしています。</p>
-
-                        <div class="sections__listOuter">
-                            <ul class="sections__list">
-                                <span class="sections__list--ttl">ターゲット</span>
-                                <li>・ファッションに苦手意識があり、自分に似合うコーディネートがわからない人</li>
-                                <li>・TPOにあったコーディネートを相談したい人</li>
-                                <li>・コーディネーターをしていて、空き時間に副業をしたい人</li>
-                            </ul>
-                            <ul class="sections__list">
-                                <span class="sections__list--ttl">ツール・期間など</span>
-                                <li>・デザインツール：Figma</li>
-                                <li>・言語：react</li>
-                                <li>・期間：9ヶ月（うちデザインは2ヶ月）</li>
-                            </ul>
+                        <div class="ov__fv">
+                            <div class="ov__fvImg"><img src="img/flow1.png" alt="デザイナー ミナリー"></div>
+                            <div class="ov__fvTxt">
+                                <div>
+                                    <h5>● このサービスを一言で表すと</h5>
+                                    <p class="sections__txt">「コーディネーターとのマッチング」で、<br>
+                                        「ファッションの提案を、気軽に受けられる」サービスです。</p>
+                                </div>
+                                <div>
+                                    <h5>● サービス名：Minalee</h5>
+                                    <p class="sections__txt">サービスを通して、自分に似合う<br class="onlyPC">「身なり」を見つけられることから。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="ov__list">
+                            <li>
+                                ●︎︎ 業界：ファッション<br>
+                                ●︎ ︎ボリューム：約20ページ<br>
+                                ●︎ ツール：Figma<br>
+                                ●︎ 仕様言語：React<br>
+                            </li>
+                            <li>
+                                ●︎ 期間：<br>
+                                ・企画、要件定義 1ヶ月<br>
+                                ・ワイヤーフレーム 1ヶ月<br>
+                                ・デザイン 3週間<br>
+                                ・プログラミング 9ヶ月<br>
+                            </li>
+                            <li>
+                                ● 体制：<br>
+                                ・デザイナー 1名<br>
+                                ・フロントエンドエンジニア 1名<br>
+                                ・バックエンドエンジニア 1名<br>
+                            </li>
+                        </ul>
+                        <h5>どんなアプリ？</h5>
+                        <p class="sections__txt">
+                            このアプリはファッションが苦手な人と、コーディネーターをマッチングするサービスです。<br>
+                            「自分に似合う服がわからない」「買い物で迷ってしまう」という人の「スタイリングサービスは敷居が高い」という悩みを解決します。オンライン完結なので気軽に相談でき、自分に似合うスタイルをプロに提案してもらうことができます。<br>
+                            また、コーディネーターは、撮影中やイベント中に待ち時間が発生してしまうことが多い職業なのですが、そんなスキマ時間も有効活用してもらうことも目的としています。
+                        </p>
+                        <div class="ov__target">
+                            <a href="img/ov_target.png" data-lightbox="group"><img src="img/ov_target.png"
+                                    alt="ターゲット像"></a>
                         </div>
                     </section>
                 </div>
@@ -118,8 +150,7 @@
                             <div class="sf__dsc">
                                 <p class="sf__ttl">コーディネートを依頼する</p>
                                 <p class="sf__txt">
-                                    サービス内容の詳細を確認し、
-                                    好みのコーディネーターに依頼します。</p>
+                                    サービス内容の詳細を確認し、気に入った人に依頼します。</p>
                             </div>
                         </div>
                         <div class="sf__item">
@@ -127,7 +158,7 @@
                                 <img src="img/flow2.png" alt="Minalee プロダクトデザイナー 制作実績">
                             </div>
                             <div class="sf__dsc">
-                                <p class="sf__ttl">依頼内容のやり取り</p>
+                                <p class="sf__ttl">提案してもらう</p>
                                 <p class="sf__txt">
                                     依頼に関するやり取りをし、提案を受け取引完了します。</p>
                             </div>
@@ -135,138 +166,224 @@
                     </div>
                 </section>
                 <div class="container">
-                    <section id="rl">
-                        <h2>Role<span>担当業務</span></h2>
-                        <div class="role__wrapper">
-                            <div>
-                                <h3>1. 要件設計 / ワイヤーフレーム作成</h3>
-                                <div class="sections__column">
-                                    <div class="sections__row">
-                                        <div class="sections__box role__box12">
-                                            <h4>デザイン面からのアプローチで全体の最適化</h4>
-                                            <p class="sections__txt">
-                                                要件設定時には、各要件の"狙い"を洗い出し、なるべく打ち合わせと並行しながら構成を練るようにしています。これにより、<strong>使いやすさや機能性の高さを、デザインを通して引き出す</strong>ことを心がけています。また、ユーザーの行動パターンや情報の流れを整理し、必要な機能を取捨選択。優先度を明確にしながら、なるべくコストを抑えたいという要望にも応えるようにデザインしました。
-                                                さらに、リリース後の拡張性を考慮し、要素の再配置や微調整のしやすさも重視。柔軟性があり長期運用しやすい設計を意識しています。
-                                            </p>
-                                            <img src="img/role1.png" class="role__img role__img--1"
-                                                alt="UI/UXデザイン 開発しやすい 工夫">
-                                            <p class="role__imgTxt role__imgTxt--1">
-                                                後にキーワード検索をできるようにしたいという要件があったため、検索アイコンなどは使わず、あえて”絞り込み”のみに。<br><br>
-                                                実装できるようになった段階で、ヘッダーに検索ワードの入力フォームを追加するだけで対応可能にしています。</p>
-                                        </div>
-                                        <div class="sections__box role__box12">
-                                            <h4>ユーザー心理を考慮した構成の提案</h4>
-                                            <p class="sections__txt">
-                                                当初案では会員登録をしないとコーディネーターを検索できないといった構造を想定されていましたが、<strong>広告宣伝費を最小化する狙いから、会員登録しなくても検索できるようなレイアウトを提案</strong>しました。<br>
-                                                特定のコーディネーターの詳細を見て興味を持ったり、アプリへの理解と信頼感を持てるようになり、ユーザーが自然と「会員登録したい！」と思えるフェーズに移行してから、登録ボタンを提供する流れに改良。ユーザー心理に寄り添った構造に変更することで、宣伝効果を最大限にする狙いがあります。
-                                            </p>
-                                            <img src="img/role2.png" class="role__img role__img--2"
-                                                alt="UI/UXデザイン 開発しやすい 工夫">
-                                            <p class="role__imgTxt role__imgTxt--2">会員登録前は、<br>
-                                                依頼するボタンから<br>
-                                                登録フォームに飛ばす。</p>
-                                        </div>
-                                    </div>
+                    <section class="ps__outer">
+                        <h2>Process<span>プロセス</span></h2>
+                        <div class="sections__column">
+                            <div class="sections__box ps">
+                                <a href="img/ps_1.png" data-lightbox="group"><img src="img/ps_1.png" alt="プロセスフロー"></a>
+                                <h4>制作にあたって気をつけた点</h4>
+                                <ul class="att__li">
+                                    <li>低コスト開発と早期リリースの方針のため、要件をWant /
+                                        Mustに分類したり、デザインパターンを出してエンジニアと連携するなどし、<strong>開発コストにも配慮</strong>してデザインしました。
+                                    </li>
+                                    <li>使いやすさや見やすさだけでなく、ユーザーが<strong>「登録したい」と思える仕様作り</strong>について、実例や参考記事を調べたりしながらデザインしました。
+                                    </li>
+                                    <li>視覚的な使いやすさや手軽さが重要な場面では、<strong>オブジェクト指向UIを取り入れる</strong>ことを意識してデザインしました。
+                                    </li>
+                                </ul>
+                            </div>
 
-                                    <div class="sections__box role__box3">
-                                        <h4>開発者との連携</h4>
+                            <div class="sections__box">
+                                <h3>01 要件定義</h3>
+                                <h4 style="padding-top: 0;">解決したい課題</h4>
+                                <p class="sections__txt">
+                                    一般的なパーソナルスタイリングサービスでは、依頼者が企業とコンタクトをとり、所属しているコーディネーターがランダムで担当者として割り振られ、スタイリングしたりショッピングに同行したりする形態が多くなっています。さらに、価格帯も数万円〜が一般的で、依頼者の心理的、金銭的な負担が大きい部分があります。<br>
+                                    そこで、どうすればこれらのペイン（課題）を解決し、ゲイン（理想の状態）へ転換できるかを考えました。 </p>
+                                <h4>課題に対する解決策</h4>
+                                <p class="sections__txt">
+                                    具体的な解決策として、コーディネーター自身によってサービス価格やプロフィールを設定可能にしています。これにより、依頼者はたくさんのコーディネーターの中から、自分の好きなスタイリングをしている人や、予算感が合う人を選んで繋がることができます。<br>
+                                    また、課題の洗い出しにより、コーディネーターの比較しやすさも重要となることが明確化しました。<br><br>
+                                    <a href="img/youken_1.png" data-lightbox="group"><img src="img/youken_1.png"
+                                            alt="ペイン ゲイン 解決策"></a>
+                                </p>
+                                <h4>課題に対する解決策の具体化</h4>
+                                <p class="sections__txt">
+                                    さらに、コーディネーターを比較する際に必要となる情報を検討し、その提供手段について具体化しながら、実装する機能の選択をしていきました。<br><br>
+                                    <a href="img/youken_2.png" data-lightbox="group"><img src="img/youken_2.png"
+                                            alt="比較に必要な情報 Minaleeで実装する機能"></a>
+                                </p>
+                                <h4>画面遷移図をもとに要件定義</h4>
+                                <p class="sections__txt">
+                                    仮作成した画面遷移図をもとに、要件定義を行いました。何の機能が必要なのか、課題を解決するためのアイディアを出したりたり、画面遷移図をアップデートしました。また、早期リリースのため、Want要件とMust要件に分類しながら一連の体験の中での優先づけも行い、注力すべき機能や画面の整理も行いました。<br><br>
+                                    ▼ 実際に使用していた画面遷移図<br><br>
+                                    <a href="img/youken_3.png" data-lightbox="group"><img src="img/youken_3.png"
+                                            alt="依頼者とコーディネーターの画面遷移図"></a><br><br>
+                                    ▼ 最終的に初期Must要件として確定した、フローのイメージ（取引キャンセルなどは除く）<br><br>
+                                    <a href="img/youken_4.png" data-lightbox="group"><img src="img/youken_4.png"
+                                            alt="依頼者とコーディネーターの画面遷移図"></a>
+                                </p>
+                            </div>
+                            <div class="sections__box lo">
+                                <h3>02 レイアウト設計</h3>
+                                <h4 style="padding-top: 0;">ワイヤーフレーム作成</h4>
+                                <p class="sections__txt">
+                                    ここまでの前提を元に、使い勝手の良さを重視し、オブジェクト指向UIを取り入れながら全体のワイヤーフレームを作成しました。<br>
+                                    途中、私の資格勉強のため、トークルーム周りと過去の取引を閲覧できる画面のワイヤーフレームは、作成を代理していただきました。ここは後ほど私の方でフィードバックをし、手を加える形となっています。（後述）
+                                    <br><br>
+                                    <a href="img/lo_1.png" data-lightbox="group"><img src="img/lo_1.png"
+                                            alt="ワイヤーフレーム作成"></a>
+                                </p>
+                                <h4>ワイヤーフレーム作成を通して行った提案</h4>
+                                <p class="sections__txt">
+                                    要件定義の時に詰めきれていなかった点や、ワイヤーフレーム作成時に気になった箇所、他社ページを分析して参考になったコンテンツなどを提案し、すり合わせを行いました。
+                                </p>
+                                <div class="lo__box">
+                                    <h6>会員登録率の向上</h6>
+                                    <div class="lo__boxInner">
+                                        <h5>１. 消費者行動理論（AIDMAやAISAS）の適用</h5>
                                         <p class="sections__txt">
-                                            今回は個人開発ということもあり、なるべくコストを抑え、開発しやすさを重視しています。<br>
-                                            そのため、要件設計から開発担当者と意見を交わす場面がほとんどで、フロント・バックエンジニアとすり合わせしながら、<strong>使いやすさ、開発しやすさ、運用しやすさを考慮して、デザインを調整</strong>する場面も多く、開発・運用しやすいアプリに関する知見も得られました。
+                                            当初は会員登録をしてからでないと、コーディネーターの一覧などは見ることができない構成が想定されていましたが、会員登録前にもコーディネーターの詳細までは閲覧できるようにすることを提案しました。<br>
+                                            これは、消費者が商品やサービスを購入するまでの心理プロセスを段階化した<strong>「消費者行動理論（AIDMAやAISAS）」というマーケティングのフレームワーク</strong>にのっとった考えです。これにより、依頼者が
+                                            CVを達成したくなる構成になることで、会員登録率が上がるだけでなく、リリース後に配信する<strong>広告の費用対効果</strong>も上がると考え提案しました。こちらは、Must要件として採用されました。<br><br>
+                                        <div class="lo__img--2"> <a href="img/lo_2.png" data-lightbox="group"><img
+                                                    src="img/lo_2.png" alt="消費者行動理論（AIDMAやAISAS）の適用"></a></div>
+                                        </p>
+                                    </div>
+                                    <div class="lo__boxInner">
+                                        <h5>２. CVボタンの文言設定</h5>
+                                        <p class="sections__txt">
+                                            上記に伴って、CVボタンのリンク先を切り替える仕様にすることを提案しました。<br>
+                                            会員登録後は「依頼する」となっていますが、会員登録前もこの表記のまま、飛び先だけ会員登録フォームにすることを提案しました。理由は、この画面を見ているユーザーは、前画面のWelocomeページや、コーディネーターの一覧ページで、①すでに新規会員登録ボタンを見ていますが、会員登録はせずにコーディネーターの詳細を見に来ていること。また、コーディネーターの詳細を見る次のフェーズである、②「依頼したい」という心理になっていることが考えられます。そのため、会員登録を促すよりも、<strong>依頼者のニーズを解消する文言を設定した方がCV率が上がる</strong>と考え、依頼するボタンのままにしておくことを提案しました。こちらもMust要件として採用されました。<br><br>
                                         </p>
                                     </div>
                                 </div>
-                            </div>
-                            <div>
-                                <h3>2. UIデザイン / ロゴデザイン</h3>
-                                <div class="sections__column">
-                                    <div class="sections__box role__box45">
-                                        <h4>ビジュアルと機能性を備えた設計づくり</h4>
+                                <div class="lo__box">
+                                    <h6>回遊率の向上</h6>
+                                    <div class="lo__boxInner">
+                                        <h5>３. おすすめ機能の実装</h5>
                                         <p class="sections__txt">
-                                            要件設計の際、クライアントとコーディネーター、それぞれ背景色を使い分け、直感的に自分の立場を認識できるようにしたいとの声がありました。<br>
-                                            そのため、クライアント側は「自分に似合う服がわからない」という不安を忘れるような、明るく可愛らしいデザインを採用しています。特にクライアントの専用画面では、イラストやポップなカラーリングを活用し、気軽にファッションを楽しめる雰囲気を演出しています。<br>
-                                            一方で、コーディネーター側は、自分らしさを持ち、スタイリッシュなものを好むユーザーにも馴染むよう、同じレイアウトを維持しながらも、落ち着いた配色や視覚的なアクセントを最小限にすることで、洗練された印象にしています。<br>
-                                            これらは、背景色、文字色など大部分の色が切り替わるため、普通に制作すると開発コストが高くなりやすい構成ですが、コーディネーターとクライアントで<strong>全体の色を連動させるようにデザインし、開発時はなるべく一括で管理できるようにしています。</strong>カラーパレットもクライアントとコーディネーターで、色が連動するように制作し、開発コストを抑える工夫をしました。
+                                            ECモールやZOZOTWONを参考に、コーディネーターの詳細ページ内に、似ているジャンルのコーディネーターをおすすめとして出すことを提案しました。<br>
+                                            初期要件では、コーディネーターのプロフィールページ内に導線が全くなく、閲覧者は前画面に戻るしかありませんでしたが、これにより、今見ているコーディネーターにあまり魅力を感じなかった場合も、自然と次のコーディネーターを見ることができ全体の回遊率が上がると考えたためです。こちらは、Want要件として採用されました。
                                         </p>
-                                        <div class="role__img45wrap">
-                                            <div class="role__img45wrap--left">
-                                                <p class="role__imgTxt role__imgTxt--4">クライアント専用画面は<br>親しみやすい印象に。
-                                                </p>
-                                                <div class="role__img--4">
-                                                    <img src="img/role3.png" alt="イラストを入れて親しみやすいデザイン">
-                                                </div>
-                                            </div>
-                                            <div class="role__img45wrap--right">
-                                                <p class="role__imgTxt role__imgTxt--5">
-                                                    白背景で同じ色を使っている箇所は<br>黒背景でもなるべく同じ配色に。
-                                                </p>
-                                                <div class=" role__img--5">
-                                                    <img src="img/role4.png" alt="見た目と開発効率の良いデザイン">
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
-                                    <div class="sections__box role__box6">
-                                        <h4>親しみやすく、汎用性の高いロゴとアプリアイコン</h4>
-                                        <div class="role__inner6">
-                                            <p class="sections__txt">
-                                                アプリの世界観を統一するため、ロゴデザインも担当。クライアントとコーディネーター双方にとって男女問わず親しみやすく、信頼感のあるデザインを意識しました。さらに、アプリアイコン横のテキストの色を変更することで、クライアントの白背景、コーディネーターの黒背景、どちらでも自然に調和する汎用性の高いデザインにしています。
-                                            </p>
-                                            <div class="role__img--6">
-                                                <img src="img/appLogo.png" alt="Minalee コーディネーターとマッチングできるアプリ スタイリスト">
-                                            </div>
-                                        </div>
+                                    <div class="lo__boxInner">
+                                        <h5>４. ジャンルやタグを、動線に</h5>
+                                        <p class="sections__txt">
+                                            上記と同じ理由から、コーディネーターの詳細ページ内に表示されている、「ジャンル」「タグ」などを導線にすることを提案しました。<br>
+                                            本来は絞り込み検索のための機能でしたが、コーディネーターのステータスとして、ページ下部に表示されていたため、ボタンとして導線化することを提案し、Must要件として採用されました。<br><br>
+                                        </p>
+                                        <div class="lo__img--4"> <a href="img/lo_4.png" data-lightbox="group"><img
+                                                    src="img/lo_4.png" alt="ジャンルやタグの一覧をリンクにして表示"></a></div>
+                                    </div>
+                                </div>
+                                <div class="lo__box">
+                                    <h6>アクティブユーザーの活性化</h6>
+                                    <div class="lo__boxInner">
+                                        <h5>5. 受付休止中のコーディネーターも表示を残す仕様へ</h5>
+                                        <p class="sections__txt">
+                                            フリマアプリのメルカリでは、あえて「売り切れ品」を残すことで、「次はまめにチェックしよう」「売り切れになる前に購入しよう」という<strong>購買意欲を掻き立て、継続率や購入率を上げているという実証例</strong>があります。参考記事は<a
+                                                href="https://markelabo.com/n/n90b7898231e8" target="_blank"
+                                                style="word-break:break-all; border-bottom: 1px solid black; ">こちら。</a>
+                                            これを参考に、満枠対応中の人気コーディネーターを非表示にするのではなく、しばらくは表示を残しておき、1ヶ月以上休止状態が続く場合に非表示にする。という仕様を提案しました。これにより、<strong>人気コーディネーターの順番待ちをしたいユーザーが発生する効果が期待でき</strong>、さらに、アクティブでないコーディネーターを選別して非表示にすることができます。こちらはMust要件で採用されました。<br><br>
+                                        </p>
+                                        <div class="lo__img--5"> <a href="img/lo_5.png" data-lightbox="group"><img
+                                                    src="img/lo_5.png" alt="ジャンルやタグの一覧をリンクにして表示"></a></div>
                                     </div>
                                 </div>
                             </div>
-                            <div>
-                                <h3>3. フロントエンド開発サポート</h3>
-                                <div class="sections__box  role__box7">
-                                    <h4></h4>
-                                    <p class="sections__txt">
-                                        Reactを用いた開発のサポートにも加わりました。<br>
-                                        主要な構築はメインの開発者が行い、その上で細部の調整やUIのディテールにこだわった実装を担当しています。<br>
-                                        ユーザー体験を高めるため、インタラクションの最適化やレイアウトの微調整を重ね、デザインと機能の両面から品質を向上させました。<br>
-                                        アプリ開発現場にエンジニアとして携わったのは初めてでしたが、実際にプログラムに触れながら開発の仕方を知ることができたので、よりエンジニアライクなスタイルの当てかたなどを学ぶ機会となりました。今後のデザインや提案に役立てたいと考えています。
-                                    </p>
-                                </div>
-                            </div>
+                            <div class="sections__box bu">
+                                <h3>03 ブラッシュアップ</h3>
+                                <h4 style="padding-top: 0;">フィードバックとブラッシュアップ</h4>
+                                <p class="sections__txt">
+                                    作成したワイヤーフレームを元に、下記のような基準に基づいてフィードバックをしながら、ブラッシュアップを行いました。<br><br>
 
-                            <div>
-                                <h3>4. マーケティング / UXデザイン</h3>
-                                <div class="sections__column">
-                                    <div class="sections__row">
-                                        <div class="sections__box  role__box8">
-                                            <h4>検索や差別化を考慮したコピー選定</h4>
-                                            <p class="sections__txt">
-                                                Googleの拡張機能を活用し、ユーザーの検索行動や月間検索ボリュームを分析。またサービスの差別化ポイントが伝わりやすいコピーを提案しました。<br>
-                                                当初は「大切な日から、いつものコーデまで あなたの『身なり』をプロに相談 Minalee」というコピーを検討していましたが、”似合う服
-                                                選んでくれる
-                                                分からない”といった検索ボリュームが多く、<strong>アプリ需要の高いユーザーの視点を再考。</strong>また、<strong>他のコーディネートサービスと比較し、お気に入りのコーディネーターを自分で選べるという強みを訴求</strong>するため、トップページのテキストを「あなたの”身なり”を選んでくれる
-                                                コーディネーターを見つけよう」へ変更。<br>
-                                                アプリの概要と差別化ポイントが直感的に伝わりやすいコピーに改善しました。
-                                            </p>
-                                            <img src="img/role5.png" class="role__img role__img--8"
-                                                alt="UI/UXデザイン 開発しやすい 工夫">
-                                        </div>
-                                        <div class="sections__box role__box9">
-                                            <h4>登録フォームの必須項目の最適化など</h4>
-                                            <p class="sections__txt">
-                                                現在は開発段階ですが、リリース後はGoogleアナリティクスを活用し、ユーザーの行動導線やCV率を分析。必須項目の最適化や、アンケート・要望の収集を通じた継続的な改善を行う予定です。<br>
-                                                たとえば、現時点ではコーディネーターの会員登録時の宣伝画像の設定は非必須としていますが、画像登録しないユーザーが多くなり、ユーザー体験が損なわれる可能性があります。そのような場合は、会員登録時の離脱率が低ければ必須化する。会員登録時の離脱が多い場合、画像未登録会員は非表示になるようにし、同時にFEO対策をすることもを検討しています。
-                                            </p>
-                                            <img src="img/role6.png" class="role__img role__img--9"
-                                                alt="UI/UXデザイン 開発しやすい 工夫">
-                                        </div>
-                                    </div>
-                                </div>
+                                    ・開発コストを抑えた作りになっているか<br>
+                                    ・迷うことなく目的を達成できる設計となっているか<br>
+                                    ・前後の画面遷移で違和感がないか<br>
+                                    ・拡張性に問題がないか（Want要件を達成できるか）<br><br>
+
+                                    私からは、ワイヤーフレーム作成の代理をしていただいた、トークルーム、トークルームの一覧、過去の取引を閲覧できる過去取引一覧の画面についてフィードバックを行い、ブラッシュアップしました。
+                                </p>
+                                <p class="bu__kadai">
+                                    <span class="bu__kadaiTtl">課題</span>
+                                    過去に、同じユーザーとやり取りがあった場合、その履歴を見れる「過去取引一覧」と「過去取引詳細」が、それぞれ「トークルーム一覧」と「トークルーム」に酷似しており、ユーザーが混乱する可能性がある。
+                                </p>
+                                <div class="bu__img--2"><a href="img/bu_2.png" data-lightbox="group"><img
+                                            src="img/bu_2.png" alt="改良前デザイン"></a></div>
+                                <div class="bu__img--3"> <a href="img/bu_3.png" data-lightbox="group"><img
+                                            src="img/bu_3.png" alt="改良後デザイン"></a></div>
+                            </div>
+                            <div class="sections__box ui">
+                                <h3>04 UI作成</h3>
+                                <h4 style="padding-top: 0;">ロゴ、アプリ名、カラーの定義</h4>
+                                <p class="sections__txt">
+                                    ロゴ、アプリ名、カラーの定義を行いました。<br>
+                                    ロゴは、コーディネーターは黒背景、依頼者は白背景と背景色を切り替えたいという要件があったため、白背景、黒背景でも馴染む、汎用性の高いデザインにしました。アプリ名は、このサービスを通して「身なり」をよくするという由来から、「ミナリー」を採用。プライマリーカラーはロゴと同色のブルーを採用しています。様々なファッションジャンルの人に馴染むよう、あえてファッション性の高いベージュや黒、金などは使わず、男女問わず親しみやすいカラーにしました。
+                                    <br><br>
+                                </p>
+                                <h4>キャッチコピー作成</h4>
+                                <p class="sections__txt">
+                                    Welcomeページに掲載するキャッチコピーも作成しました。<br>
+                                    最初は、私の中では「大切な日から、いつものコーデまで
+                                    あなたの”身なり”をプロに相談」というキャッチコピーを設定しようと考えており、その<strong>キーワードの適正を確認するためにGoogle検索の予測入力補完や、拡張機能のKeyword
+                                        surferを使い、ビッグキーワードの決定、スモールキーワード、関連キーワード、月刊検索ボリュームの調査</strong>を行いました。
+                                </p>
+                                <div class="ui__img--2"><a href="img/ui_2.png" data-lightbox="group"><img
+                                            src="img/ui_2.png" alt="キーワードの選定"></a></div>
+                                <p class="sections__txt">
+                                    スタイリスト or
+                                    コーディネーターの単語で比較した場合、スタイリストの方が検索ヒットや上位表示を狙いやすそうな印象ですが、スタイリストでは関連キーワードがほとんど出てこない状況でした。理由は、おそらくスタイリストは専門的な印象が強く、<strong>業界に精通していない人やファッションが苦手な人はコーディネーターという単語の方が身近なため</strong>と予想。<br>また、どちらもボリュームの多いワードのため、検索するときは複数単語組み合わせると想定し、関連キーワードの豊富なコーディネーターをメインにする方針をとりました。
+                                    さらに、ここに掲載しきれなかった情報も含め、ファッションが苦手な人は下記のようなキーワードで探している印象を受けました。
+                                </p>
+                                <div class="ui__img--3"><a href="img/ui_3.png" data-lightbox="group"><img
+                                            src="img/ui_3.png" alt="追加キーワード"></a></div>
+
+                                <p class="sections__txt">
+                                    この調査を受け、
+                                    コーディネーターを自分で選べるという強みをアピールしつつ、「自分に似合うコーディネートが分からない」「似合う服を選んでくれる」などのニーズを持っている人に刺さりやすいと考えられるキャッチコピーを提案し、採用されました。
+                                </p>
+                                <div class="ui__img--4"><a href="img/ui_4.png" data-lightbox="group"><img
+                                            src="img/ui_4.png" alt="あなたの身なりを選んでくれる コーディネーターを見つけよう"></a></div>
+                                <h4>全体のUIビジュアル作成</h4>
+                                <p class="sections__txt">
+                                    ここまでの前提を元にUIビジュアルのデザインをしました。<br>
+                                    コーディネーターは黒背景、依頼者は白背景と、色を切り替えたいという要件がありました。そのため、コーディネーターと依頼者の配色が連動し、なるべく一括管理できるようにデザインやカラーパネルを作成し、開発コストを抑えました。
+                                    <br><br>
+                                </p>
+                                <div class="ui__img--5"><a href="img/ui_5.png" data-lightbox="group"><img
+                                            src="img/ui_5.png" alt="あなたの身なりを選んでくれる コーディネーターを見つけよう"></a></div>
+                                <div class="ui__img--6"><a href="img/ui_6.png" data-lightbox="group"><img
+                                            src="img/ui_6.png" alt="カラーパネルは開発コストを抑える構成に"></a></div>
                             </div>
                         </div>
-                        <a href="../">
-                            <div class="btn__arrow btn__work">一覧へ戻る</div>
+                        <a href="../" class="btn__arrow btn__work">
+                            <div>一覧へ戻る</div>
                         </a>
                     </section>
                 </div>
+
+
+
+                <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        toastr.options = {
+                            "closeButton": true,
+                            "debug": false,
+                            "newestOnTop": false,
+                            "progressBar": false,
+                            "positionClass": "toast-bottom-right",
+                            "preventDuplicates": false,
+                            "showDuration": "3000",
+                            "timeOut": "5000",
+                            "extendedTimeOut": "1000",
+                            "showEasing": "swing",
+                            "hideEasing": "linear",
+                            "showMethod": "fadeIn",
+                            "hideMethod": "fadeOut"
+                        }
+                        setTimeout(function () {
+                            toastr.info("図やリストは、クリックで拡大できます");
+                        }, 3000);
+                    });
+                </script>
+
+
+
+
+
+
+
 
                 <footer class="footer">
                     <div class="container">
@@ -289,8 +406,9 @@
             </div>
         </article>
     </main>
-
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" defer></script>
     <script src="/common/common.js"></script>
     <script src="/js/works.js" defer></script>
     <script>

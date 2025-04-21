@@ -1,0 +1,135 @@
+.img-top {
+  margin-top: 40px;
+}
+
+.mv {
+  position: fixed;
+  z-index: -2;
+  width: 100%;
+  top: 0px;
+  height: 700px;
+}
+.mv__inner {
+  position: relative;
+}
+.mv__logo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: 500px;
+  position: absolute;
+  right: 5%;
+  z-index: 1;
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  .mv__logo {
+    top: 70svh;
+    width: 270px;
+  }
+}
+@media (max-width: 767px) {
+  .mv__logo {
+    width: 140px;
+    font-size: 10px;
+    top: 80svh;
+    right: 10%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+}
+.mv__txt {
+  display: inline-block;
+  line-height: 2;
+  margin-top: 6px;
+}
+@media (max-width: 767px) {
+  .mv__txt {
+    padding-left: 0;
+  }
+}
+.mv__img {
+  position: fixed;
+  width: 1100px;
+  min-height: 120vh;
+  right: calc((100vw - 900px) / 2 + 300px);
+  top: -80px;
+  background: url(../img/works_fv.png) no-repeat top right/cover;
+}
+@media (max-width: 767px) {
+  .mv__img {
+    position: fixed;
+    width: calc(100% - 80px);
+    left: 0%;
+    height: 100vh;
+    top: -120px;
+    background: url(../img/works_fv.png) no-repeat top right/cover;
+    top: 0;
+  }
+}
+
+.sections__listOuter {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 0 80px;
+}
+
+.ov {
+  margin-top: min(1000px, 101svh);
+}
+
+h5 {
+  font-weight: bold;
+}
+
+h3 {
+  margin-top: 80px;
+}
+@media (max-width: 767px) {
+  h3 {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .sections__box {
+    border-radius: 0;
+  }
+}
+
+.onlySP {
+  display: none;
+}
+@media (max-width: 767px) {
+  .onlySP {
+    display: block;
+  }
+}
+
+.onlyPC {
+  display: block;
+}
+@media (max-width: 767px) {
+  .onlyPC {
+    display: none;
+  }
+}

@@ -24,6 +24,19 @@ $breakpoints: (
     }
 }
 
+
+.sections .container {
+    @include mq() {
+        width: 92%;
+    }
+}
+
+.sections__box {
+    @include mq() {
+        border-radius: 30px;
+    }
+}
+
 .header__logo {
     @include mq() {
         opacity: 0;
@@ -69,7 +82,7 @@ $breakpoints: (
             position: inherit;
             height: 1000px;
             width: 100vw;
-            left: 50%;
+            left: 52%;
             transform: translate(-50%, 0
             );
     }
