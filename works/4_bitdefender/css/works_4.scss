@@ -41,15 +41,16 @@ $breakpoints: (
         top: min(50vh, 500px
         );
     position: absolute;
-    left: 5%;
+    left: 4%;
     z-index: 1;
-    font-size: 30px;
+    font-size: 22px;
     font-weight: bold;
 
     @include mq(sp) {
-        top: calc(50svh - 35vw);
+        top: calc(50svh - 40vw);
         left: 50%;
-        width: fit-content;
+        text-align: center;
+        font-size: 18px;
         transform: translate(-50%, 0);
     }
 

@@ -14,16 +14,24 @@
   position: absolute;
   left: 5%;
   z-index: 1;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: bold;
 }
 @media (max-width: 767px) {
   .mv__logo {
-    top: calc(50svh - 35vw);
+    top: calc(50svh - 30vw);
     left: 50%;
+    font-size: 18px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-transform: translate(-50%, -30px);
             transform: translate(-50%, -30px);
   }
@@ -66,7 +74,7 @@
     background-position: center center;
     max-width: none;
     height: 100svh;
-    top: calc(50svh + 100px - 30px);
+    top: calc(50svh + 100px);
   }
 }
 
@@ -103,61 +111,5 @@
 @media (max-width: 767px) {
   .onlyPC {
     display: none;
-  }
-}
-
-.goSite {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  position: fixed;
-  width: 136px;
-  height: 136px;
-  right: 5%;
-  bottom: 5%;
-  background: rgba(242, 247, 255, 0.8);
-  border: 1px solid #FFFFFF;
-  -webkit-box-shadow: 16px 25px 32px rgba(53, 56, 86, 0.13);
-          box-shadow: 16px 25px 32px rgba(53, 56, 86, 0.13);
-  -webkit-backdrop-filter: blur(2.5px);
-          backdrop-filter: blur(2.5px);
-  border-radius: 100%;
-  z-index: 2;
-  font-style: normal;
-  font-size: 20px;
-  line-height: 120%;
-  text-align: center;
-  letter-spacing: 0.05rem;
-  font-weight: bold;
-  padding-top: 20px;
-  color: #43A1FF;
-}
-@media (max-width: 767px) {
-  .goSite {
-    bottom: 0;
-    right: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    -webkit-backdrop-filter: 0;
-            backdrop-filter: 0;
-    width: 100vw;
-    height: 60px;
-    border-radius: 0;
-    background: #43A1FF;
-    opacity: 1;
-    padding-top: 0;
-    border: none;
-    color: #fff;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
   }
 }

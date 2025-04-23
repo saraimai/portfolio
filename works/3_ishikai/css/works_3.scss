@@ -43,13 +43,16 @@ $breakpoints: (
     position: absolute;
     left: 5%;
     z-index: 1;
-    font-size: 30px;
+    font-size: 22px;
     font-weight: bold;
 
     @include mq(sp) {
-        top: calc(50svh - 35vw);
+        top: calc(50svh - 30vw);
         left: 50%;
+        font-size: 18px;
         width: fit-content;
+        display: flex;
+        flex-direction: column;
         transform: translate(-50%, -30px);
     }
 
@@ -90,7 +93,7 @@ $breakpoints: (
         background-position: center center;
         max-width: none;
         height: 100svh;
-        top: calc(50svh + 100px - 30px);
+        top: calc(50svh + 100px);
     }
 }
 }
@@ -127,52 +130,5 @@ $breakpoints: (
 
     @include mq() {
         display: none;
-    }
-}
-
-
-.goSite {
-    box-sizing: border-box;
-    position: fixed;
-    width: 136px;
-    height: 136px;
-    right: 5%;
-    bottom: 5%;
-
-    background: rgba(242, 247, 255, 0.8);
-    border: 1px solid #FFFFFF;
-    box-shadow: 16px 25px 32px rgba(53, 56, 86, 0.13);
-    backdrop-filter: blur(2.5px);
-    border-radius: 100%;
-    z-index: 2;
-
-    font-style: normal;
-    font-size: 20px;
-    line-height: 120%;
-    text-align: center;
-    letter-spacing: 0.05rem;
-    font-weight: bold;
-    padding-top: 20px;
-    color: $pr;
-
-    @include mq() {
-        bottom: 0;
-        right: 0;
-        box-shadow: none;
-        backdrop-filter: 0;
-        width: 100vw;
-        height: 60px;
-        border-radius: 0;
-        background: $pr ;
-        opacity: 1;
-        padding-top: 0;
-        border: none;
-        color: #fff;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-
     }
 }

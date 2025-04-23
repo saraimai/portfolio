@@ -24,14 +24,17 @@ $breakpoints: (
     }
 }
 
-.sections__listOuter {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: start;
-    align-items: start;
-    margin: auto;
-    width: fit-content;
-    gap: 0 80px;
+.sections {
+    &__listOuter {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: start;
+        margin: auto;
+        width: fit-content;
+        gap: 0 80px;
+    }
+
 }
 
 .mv {
@@ -43,6 +46,11 @@ $breakpoints: (
 
     &__inner {
         position: relative;
+
+        @include mq(sp) {
+            max-width: 470px;
+            margin: auto;
+        }
     }
 
     &__logo {

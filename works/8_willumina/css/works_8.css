@@ -19,7 +19,7 @@
   .mv__logo {
     width: 140px;
     font-size: 10px;
-    top: 45svh;
+    top: 42svh;
     right: 10%;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
@@ -54,7 +54,7 @@
     top: 12vh;
     background-size: 130%;
     overflow: visible;
-    background: url(../img/works1_fv_sp.png) no-repeat right bottom/cover;
+    background: url(../img/works1_fv_sp.png) no-repeat right top/cover;
   }
 }
 
