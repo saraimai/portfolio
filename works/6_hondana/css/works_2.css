@@ -28,6 +28,12 @@
 .mv__inner {
   position: relative;
 }
+@media (max-width: 767px) {
+  .mv__inner {
+    max-width: 470px;
+    margin: auto;
+  }
+}
 .mv__logo {
   width: 300px;
   top: 450px;

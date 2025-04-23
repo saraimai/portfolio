@@ -40,10 +40,14 @@ $breakpoints: (
 
     &__inner {
         position: relative;
+
+        @include mq(sp) {
+            max-width: 470px;
+            margin: auto;
+        }
     }
 
     &__logo {
-        width: 400px;
         top: 450px;
         position: absolute;
         right: 50%;

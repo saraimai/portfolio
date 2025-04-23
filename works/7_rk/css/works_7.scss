@@ -52,11 +52,10 @@ $breakpoints: (
 
         @include mq(sp) {
             position: fixed;
-            width: 260px;
+            width: 200px;
             font-size: 18px;
-            padding: 26px 18px 26px 24px;
-            top: 15vh;
-            right: 0;
+            top: 30vw;
+            right: 12vw;
             border-radius: 20px 0 0 20px;
         }
     }
@@ -85,10 +84,8 @@ $breakpoints: (
 
     @include mq(sp) {
         width: 100vw;
-
         left: 0;
         background: url(../img/works_fv_sp.png)no-repeat right top/cover;
-
     }
 }
 }
