@@ -52,6 +52,8 @@ img {
 /* リンク */
 a {
   text-decoration: none;
+  -webkit-transition: 0.4s ease opacity;
+  transition: 0.4s ease opacity;
   color: inherit;
 }
 a:hover {
@@ -59,6 +61,10 @@ a:hover {
   -webkit-transition: 0.4s ease opacity;
   transition: 0.4s ease opacity;
   cursor: pointer;
+}
+
+a[data-lightbox=group]:hover {
+  opacity: 1;
 }
 
 a.opacityNone:hover {
@@ -656,15 +662,15 @@ textarea:-ms-input-placeholder {
 }
 
 .bg {
-  -webkit-backdrop-filter: blur(16px);
-          backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(26px);
+          backdrop-filter: blur(26px);
   width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
   bottom: 0;
   z-index: -1;
-  opacity: 0;
+  background: rgba(242, 247, 255, 0.4);
 }
 
 strong {

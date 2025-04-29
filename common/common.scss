@@ -82,12 +82,20 @@ img {
 /* リンク */
 a {
   text-decoration: none;
+  transition: 0.4s ease opacity;
   color: inherit;
 
   &:hover {
     opacity: 0.7;
     transition: 0.4s ease opacity;
     cursor: pointer;
+  }
+}
+
+a[data-lightbox="group"] {
+
+  &:hover {
+    opacity: 1;
   }
 }
 
@@ -627,14 +635,14 @@ textarea:-ms-input-placeholder {
 
 
 .bg {
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(26px);
   width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
   bottom: 0;
   z-index: -1;
-  opacity: 0;
+  background: $bg40;
 }
 
 strong {
