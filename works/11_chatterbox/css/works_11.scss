@@ -1,0 +1,251 @@
+$bg: #F2F7FF;
+$bg40: #F2F7FF66; //40%
+$bg20: #F2F7FF33; //20%
+
+$bg-blue: #F4F9FF;
+$bg-white: #FFFFFF;
+
+$pr: #43A1FF;
+
+$tag-color: #777;
+$text-main: #333;
+
+
+$breakpoints: (
+    //キー : 値
+    'sp': "(max-width: 767px)",
+    'tab': "(min-width: 768px) and (max-width: 900px)",
+    'pc': "(min-width: 901px)"
+    ) !default;
+
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+
+.sections__listOuter {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 40px 60px;
+    margin: 60px auto 0px;
+    background: $bg-blue;
+    font-size: 14px;
+    flex-wrap: wrap;
+    border-radius: 14px;
+    width: fit-content;
+
+    @include mq() {
+        justify-content: start;
+        padding: 40px 30px;
+        gap: 0px;
+    }
+}
+
+.img-top {
+    margin: 0 auto 80px auto;
+    max-width: 770px;
+    padding: 20px 10px 0 0;
+
+    @include mq(sp) {
+        padding: 10px 10px 0 0;
+        margin: 0 auto 20px auto;
+    }
+
+    &.pt_3 {
+        max-width: 700px;
+        padding: 20px 14px 0 0;
+    }
+
+}
+
+
+
+.mv {
+    position: fixed;
+    z-index: -2;
+    width: 100%;
+    top: 0px;
+    height: 700px;
+
+    &__inner {
+        position: relative;
+    }
+
+    &__logo {
+        width: 300px;
+        top: min(50vh, 500px
+        );
+    position: absolute;
+    left: 5%;
+    z-index: 1;
+    font-size: 22px;
+    font-weight: bold;
+
+    @include mq(sp) {
+        text-align: center;
+        top: calc(50svh - 30vw);
+        left: 50%;
+        font-size: 18px;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        transform: translate(-50%, -30px);
+    }
+
+}
+
+&__txt {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 2;
+    margin-top: 20px;
+    font-weight: normal;
+
+    @include mq(sp) {
+        padding-left: 0;
+        text-wrap: nowrap;
+        font-size: 10px;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+&__img {
+    top: 100px;
+    right: -5%;
+    width: calc(100% - 195px);
+    max-width: 770px;
+    position: absolute;
+    height: calc(100svh - 50px);
+    max-height: 1000px;
+    background: url(../img/works_fv.png)no-repeat center center/contain;
+    transform: translate(0, 0);
+
+    @include mq(sp) {
+        position: absolute;
+        right: 50%;
+        transform: translate(51%, -50%);
+        width: 110vw;
+        background-position: center center;
+        max-width: none;
+        height: 100svh;
+        top: calc(50svh + 100px);
+    }
+}
+}
+
+
+.overview {
+    margin-top: min(1000px, 101svh);
+}
+
+.sf {
+    &.sections__box {
+        border-radius: 0;
+        width: 100%;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        align-content: center;
+        max-width: 930px;
+        margin: auto;
+        width: 100%;
+        gap: 50px;
+
+        @include mq(sp) {
+            flex-direction: column;
+            margin: auto;
+            width: 100%;
+            gap: 14px;
+            max-width: 400px;
+        }
+
+        @include mq(tab) {
+            gap: 30px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        align-content: center;
+        max-width: 300px;
+        margin-top: 20px;
+
+
+        @include mq(sp) {
+            flex-direction: row;
+            width: 100%;
+            justify-content: start;
+            max-width: none;
+            align-items: start;
+        }
+
+    }
+
+    &__img {
+        width: 100%;
+
+        @include mq(sp) {
+            width: 160px;
+            font-size: 13px;
+            gap: 20px;
+        }
+
+        @include mq(tab) {
+            width: 100%;
+            font-size: 13px;
+        }
+
+    }
+
+    &__dsc {
+        @include mq(sp) {
+            flex: 1;
+        }
+    }
+
+    &__ttl {
+        font-weight: bold;
+    }
+}
+
+
+.pt {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+
+    &.sections__box {
+        margin-bottom: 0;
+    }
+}
+
+
+.onlySP {
+    display: none;
+
+    @include mq() {
+        display: block;
+    }
+}
+
+.onlyPC {
+    display: block;
+
+    @include mq() {
+        display: none;
+    }
+}

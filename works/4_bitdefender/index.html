@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="/common/common.css">
     <link rel="stylesheet" href="css/works_4.css" media="print" onload="this.media='all'">
     <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
-
+    <!-- wow -->
+    <link rel="stylesheet" href="/common/animate.css" />
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVZ4JNZ2L9"></script>
@@ -59,7 +60,7 @@
     <div class="drawer__bg"></div>
     <main>
         <article>
-            <section id="mv" class="mv">
+            <section id="mv" class="mv wow animate fadeInUp">
                 <div class="container">
                     <div class="mv__inner">
                         <h1 class="mv__logo">セキュリティソフトLP<br>
@@ -75,42 +76,37 @@
             </section>
             <div class="sections">
                 <div class="container">
-                    <section id="ov" class="overview sections__box">
+                    <section id="ov" class="overview sections__box wow animate fadeInUp">
                         <h2>Overview<span>概要</span></h2>
                         <p class="sections__txt">
-                            京都府医師会の公式サイトのリニューアルプロジェクトにおいて、70ページ以上の大規模サイトの、Topページ〜2階層目、および3階層目の一部コーディングを担当。<br>
-                            上層のページの担当を引き受けたため見た目の美しさはもちろん、開発後に別業者へ引き渡してWordPress化される予定があったため、保守性の高いスタイル設計を心掛けました。具体的には、共通のスタイルやレイアウトを一元管理できるファイル構成にし、後から編集しやすいようにCSS/HTMLの構造を整理。これにより、引き継ぎ後のメンテナンスや追加作業がスムーズに行えるよう配慮しています。
-                            また、フルレスポンシブ対応を実施し、PC・タブレット・スマートフォン、どのデバイスからでも快適に利用できるよう配慮しました。<br>
-                            プロジェクト進行中は、他社のディレクターさんと当社の担当者との密な連携を取りながら制作。定期的な打ち合わせやフィードバックの共有を通じて、デザインと機能面の調整を行い、クライアントの要望に最適な構成を実現しました。
-                        </p>
+                            リピーターの方から依頼されたセキュリティソフトのランディングページのコーディングを担当しました。<br>
+                            構成が非常に複雑で、スイッチ機能を搭載し、表示項目を切り替えるデザインが採用されており、動的にコンテンツが切り替わる仕様が求められました。<br>
+                            また、問い合わせフォームにWordPressとスパム対策のreCAPTCHAも実装しており、それぞれの動作テストなども行なって納品しました。 </p>
                         <div class="sections__listOuter">
-                            <ul class="sections__list">
-                                <span class="sections__list--ttl">ツール・期間など</span>
-                                <li>・使用言語：HTML、CSS(SCSS)、JavaScript</li>
-                                <li>・期間：2ヶ月</li>
+                            <ul>
+                                <li>● 業界：IT業界</li>
+                                <li>● 使用言語：PHP、CSS、JavaScript</li>
+                                <li>● 期間：3週間</li>
                             </ul>
                         </div>
                     </section>
                 </div>
                 <div class="container">
-                    <section id="solutions" class="pt sections__box">
+                    <section id="solutions" class="pt sections__box wow animate fadeInUp">
                         <h2>Point<span>ポイント</span></h2>
                         <div class="pt__inner">
                             <p class="sections__txt">
-                                <b>１. 統一デザインで運用しやすいWordPress設計</b><br>
-                                hタグや基本的なレイアウトを共通化し、WordPress上でタグを選ぶだけでデザインが自動適用される設計にしました。これにより、サイト全体に統一感のあるスタイルが反映され、コードが書けない人でも簡単に美しいデザインを実装可能に。運用担当者も手間をかけずにデザイン調整を行える仕様にしています。
+                                <b>１. 問い合わせフォームに、WordPressとreCAPTCHA実装</b><br>
+                                問い合わせフォームに、スパム対策用のreCAPTCHAを追加するため、WordPressのContact Form
+                                7プラグインと、reCAPTCHAプラグインを導入。テスト環境で動作確認や、メールのテスト送信など、問題なく送信できることを確認して納品しました。
                             </p>
                             <p class="sections__txt">
-                                <b>２. デザインスキルを活かし、複雑な構造にも柔軟に対応</b><br>
-                                ドロワーメニュー内のトグル実装をはじめ、PCとスマホで構造が大きく異なる複雑なデザインが随所に点在していましたが、デザイナーの制作意図を汲み取り、デザインスキルを活かして美しく調整。フルレスポンシブデザインとして一貫性を持たせました。また、画面幅の狭いデバイスや古い端末を使用するユーザーが多いことを考慮し、ディレクターと協力しながら多様な環境で入念に検証・調整を行いました。
+                                <b>２. 表示項目の切り替えボタン・リスト実装</b><br>
+                                ページ内アンカーリンクがあるため、表示を切り替えている状態で誤ってページの高さを認識しないように、JavaScriptを使ってコンテンツを動的に表示させる工夫をしました。これにより、ユーザーがページをスクロールした際にレイアウトが崩れることなく、表示項目の切り替えがスムーズに行えるようにしています。
                             </p>
                             <p class="sections__txt">
-                                <b>３. コードの保守性を意識した設計</b><br>
-                                CSS設計にはBEMとSCSSを使用し、common.jsやcommon.cssを作成して、サイト全体で共通のスタイルと機能を効率的に実装。これにより、後からの変更や更新が容易になり、他業者への引き継ぎもスムーズに行えるようにしています。
-                            </p>
-                            <p class="sections__txt">
-                                <b>４. 円滑な連携と迅速なプロジェクト対応</b><br>
-                                他社のディレクターや委託先担当者と綿密に連携し、クライアントの修正にも柔軟に対応。途中、委託先担当者と連絡が取れないトラブルが発生しましたが、社内で状況を確認し、ディレクターへ共有しながら、至急対応が必要な作業をフォロー。迅速な調整を行いました。
+                                <b>３. フルレスポンシブ対応</b><br>
+                                LPは、PC、タブレット、スマートフォンでも綺麗に表示されるよう、フルレスポンシブ対応を行いました。どのデバイスでも快適に閲覧できるように、画面サイズに合わせた調整を施しました。
                             </p>
                         </div>
                     </section>
@@ -154,7 +150,9 @@
         });
 
     </script>
-
+    <!-- wow -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>new WOW().init();</script>
 </body>
 
 </html>

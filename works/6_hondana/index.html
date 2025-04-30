@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/common/common.css">
     <link rel="stylesheet" href="css/works_2.css" media="print" onload="this.media='all'">
     <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <!-- wow -->
+    <link rel="stylesheet" href="/common/animate.css" />
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVZ4JNZ2L9"></script>
@@ -58,7 +60,7 @@
     <div class="drawer__bg"></div>
     <main>
         <article>
-            <section id="mv" class="mv">
+            <section id="mv" class="mv wow animate fadeInUp">
                 <div class="container">
                     <div class="mv__inner">
                         <h1 class="mv__logo"><span class="en"><b>Writter</b></span>
@@ -74,22 +76,23 @@
             </section>
             <div class="sections">
                 <div class="container">
-                    <section id="ov" class="overview sections__box">
+                    <section id="ov" class="overview sections__box wow animate fadeInUp">
                         <h2>Overview<span>概要</span></h2>
                         <p class="sections__txt">
                             本棚アプリは、ユーザーが読書履歴を管理し、登録した本の情報を簡単にチェックできるサービスです。今回、新たにリリースノートのページと通知機能のデザインを作成しました。リリースノートでは、アプリの更新情報を一覧で確認できるだけでなく、ユーザーがフィードバックを送れる機能を搭載。一方、通知機能では、本棚に登録された本の情報が更新された際にユーザーへ適切に知らせる仕組みを設計しました。
                         </p>
                         <div class="sections__listOuter">
                             <ul class="sections__list">
-                                <span class="sections__list--ttl">ターゲット</span>
+                                <li>● ツール：Figma</li>
+                                <li>● 業界：出版</li>
+                                <li>● 期間：1週間</li>
+                                <li>● ボリューム：2ページ</li>
+                            </ul>
+                            <ul class="sections__list">
+                                <span>● ターゲット：</span>
                                 <li>・本を頻繁に読む人</li>
                                 <li>・スマホで手軽に本を読みたい人</li>
                                 <li>・読んだ本をわかりやすく管理したい人</li>
-                            </ul>
-                            <ul class="sections__list">
-                                <span class="sections__list--ttl">ツール・期間など</span>
-                                <li>・デザインツール：Figma</li>
-                                <li>・期間：1週間</li>
                             </ul>
                         </div>
                         <a href="https://www.figma.com/proto/yMbpE753dYYtaQr5DS4kXS/%E3%83%97%E3%83%AD%E3%83%88%E3%82%BF%E3%82%A4%E3%83%97_works_6_hondana-1?t=36kZjbgGxtbdFcHR-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=1-312&starting-point-node-id=1%3A325"
@@ -99,13 +102,13 @@
                     </section>
                 </div>
                 <div class="container">
-                    <section id="ps">
+                    <section id="ps" class=" wow animate fadeInUp">
                         <h2>Point<span>ポイント</span></h2>
                         <div class="ps__wrapper">
-                            <div>
+                            <div class=" wow animate fadeInUp">
                                 <h3>リリースノート</h3>
                                 <div class="sections__column">
-                                    <div class="sections__box ps__box ps__box--1">
+                                    <div class="sections__box ps__box ps__box--1 wow animate fadeInUp">
                                         <h4>全体の統一感を損なわないデザイン</h4>
                                         <p class="sections__txt ps__txt ps__txt--1">
                                             リリースノートページのデザインにおいて、アプリ全体の統一性を損なわないことと、再利用できるコンポーネントを意識して設計しました。ご依頼の際、既存のデザインを確認するために、設定画面、ログイン画面、本棚ページの3つの画面を参考として共有いただき、その中でも、特に設定画面のデザインがリリースノートページに適用可能であったため、このデザインを活用しています。（参考）<br>これにより、<strong>アプリ全体のデザインに一貫性が生まれ、今後新しい機能を追加する際にも簡単に拡張可能</strong>となるようにしています。
@@ -113,7 +116,7 @@
                                         <div class="ps__img--1"> <img src="img/pt1.png" alt="参考画像">
                                         </div>
                                     </div>
-                                    <div class="sections__box ps__box ps__box--2">
+                                    <div class="sections__box ps__box ps__box--2 wow animate fadeInUp">
                                         <h4>ご意見箱のモーダル表示</h4>
                                         <p class="sections__txt ps__txt ps__txt--2">
                                             このアプリには当初、ご意見箱の機能が組み込まれていませんでしたが、クライアントからリリースノートページにこの機能を追加してほしいという要件がありました。最初にいただいた要望では、直接入力フォームをリリースノートページに設置し、ユーザーがそのままフィードバックを送信できるような仕様を検討されていました。しかし、入力フォームをそのまま表示すると、ユーザーが意図せず送信してしまうリスクがあり、さらに、性質が異なる機能を同じページに設置すると、ユーザーが意見箱を見つけにくくなる可能性があると考えました。<br>
@@ -124,7 +127,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
+                            <div class=" wow animate fadeInUp">
                                 <h3>通知画面</h3>
                                 <div class="sections__box ps__box ps__box--3">
                                     <h4>しっかり見せつつシンプルに</h4>
@@ -174,7 +177,9 @@
         });
 
     </script>
-
+    <!-- wow -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>new WOW().init();</script>
 </body>
 
 </html>

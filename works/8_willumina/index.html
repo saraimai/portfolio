@@ -16,7 +16,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" defer
         type="text/javascript"></script>
-
+    <!-- wow -->
+    <link rel="stylesheet" href="/common/animate.css" />
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVZ4JNZ2L9"></script>
@@ -65,7 +66,7 @@
     <div class="drawer__bg"></div>
     <main>
         <article>
-            <section id="mv" class="mv">
+            <section id="mv" class="mv wow animate fadeInUp">
                 <div class="container">
                     <div class="mv__inner">
                         <h1 class="mv__logo">
@@ -84,20 +85,23 @@
                 <div class="container">
                     <div class="ps__outer">
                         <section>
-                            <div id="ov" class="ov sections__box">
+                            <div id="ov" class="ov sections__box wow animate fadeInUp">
                                 <h2>Overview<span>概要</span></h2>
                                 <p class="sections__txt">
                                     株式会社ウィルミナ様の商品LP、商品サイト、ブランドサイトなどを制作しました。<br>
                                     デザインを忠実に再現することを最優先に、スマホライクなデザインのコーディングを行いました。レスポンシブ時のレイアウトにも注意を払い、視覚的な一貫性を保つよう配慮しています。また、ユーザーに楽しさを感じてもらえるよう、ファーストビューのアニメーションやスクロールに反応する要素を加えることで、サイト全体の魅力を引き立てるなどしています。<br>
                                     さらに、サイトの読み込み速度を最適化し、ユーザーが快適に閲覧できるよう配慮。遅延なくページが表示されることで、ユーザーのストレスを軽減し、サイトのパフォーマンスを向上させSEO面でも強化しました。
                                 </p>
-                                <div class="sections__listOuter">
-                                    <ul class="sections__list">
-                                        <span class="sections__list--ttl">言語・期間など</span>
-                                        <li>・言語：HTML , CSS , JavaScript</li>
-                                        <li>・期間：2ヶ月程度</li>
-                                    </ul>
-                                </div>
+                                <ul class="sections__listOuter">
+                                    <div>
+                                        <li>● 業界：コスメ , 美容</li>
+                                        <li>● 言語：HTML , CSS , JavaScript</li>
+                                    </div>
+                                    <div>
+                                        <li>● 期間：2ヶ月程度</li>
+                                        <li>● ボリューム：3サイト</li>
+                                    </div>
+                                </ul>
                             </div>
                             <a href="../" class="btn__arrow btn__work">
                                 <div>一覧へ戻る</div>
@@ -140,7 +144,9 @@
         });
 
     </script>
-
+    <!-- wow -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>new WOW().init();</script>
 </body>
 
 </html>

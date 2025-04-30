@@ -3,6 +3,8 @@ $bg40: #F2F7FF66; //40%
 $bg20: #F2F7FF33; //20%
 
 $bg-white: #FFFFFF;
+$bg-blue: #F4F9FF;
+
 
 $pr: #43A1FF;
 
@@ -25,10 +27,22 @@ $breakpoints: (
 }
 
 .sections__listOuter {
-    flex-direction: column;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 40px 60px;
+    margin: 60px auto 60px;
+    background: $bg-blue;
+    font-size: 14px;
+    flex-wrap: wrap;
+    border-radius: 14px;
     width: fit-content;
-    gap: 0;
+
+    @include mq() {
+        justify-content: start;
+        padding: 40px 30px;
+        gap: 0px;
+    }
 }
 
 .mv {
@@ -287,14 +301,12 @@ $breakpoints: (
                 width: 200px;
                 margin-left: auto;
                 margin-right: auto;
-                width: fit-content;
             }
 
             @include mq(sp) {
                 width: 200px;
                 margin-left: auto;
                 margin-right: auto;
-                width: fit-content;
                 padding-right: 40px;
             }
         }
