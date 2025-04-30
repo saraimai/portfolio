@@ -13,7 +13,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" defer
         type="text/javascript"></script>
-
+    <!-- wow -->
+    <link rel="stylesheet" href="/common/animate.css" />
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVZ4JNZ2L9"></script>
@@ -62,7 +63,7 @@
     <div class="drawer__bg"></div>
     <main>
         <article>
-            <section id="mv" class="mv">
+            <section id="mv" class="mv wow animate fadeInUp">
                 <div class="container">
                     <div class="mv__inner">
                         <h1 class="mv__logo en">Chatter Box
@@ -77,30 +78,41 @@
             </section>
             <div class="sections">
                 <div class="container">
-                    <section id="ov" class="overview sections__box">
+                    <section id="ov" class="overview sections__box wow animate fadeInUp">
                         <h2>Overview<span>概要</span></h2>
                         <p class="sections__txt">
                             AIと対話するチャット型のwebアプリケーション「Chatter Box」のデザインを作成しました。<br>
                             chatGPTのようにユーザーから質問を投げかけ、それに対するAIからの解答を受け取ることができます。<br>
                             このアプリには、AIのモードには通常モードの他に「説明」「共感」「創造」の３つのモードがあり、ユーザーの選択に応じてAIの性質を切り替えることができます。その際、クライアントからの希望で、吹き出しの形を「説明モード：角あり」「共感モード：丸角」「創造モード：波型」と切り替えたいとのご希望がありました。<br>
                             また、対話の中で、AIからの質問に対しては、3つの選択肢を提案され、ユーザーは最も適当な回答を選択すると、ユーザーからのチャットメッセージとして投げかけられる仕様です。 </p>
-                        <div class="sections__listOuter">
-                            <ul class="sections__list">
-                                <span class="sections__list--ttl">ツール・期間など</span>
-                                <li>・デザインツール：Figma</li>
-                                <li>・期間：3週間</li>
-                            </ul>
-                        </div>
-                        <!-- <a href="https://www.kyoto.med.or.jp/" target="_blank" class="btn__arrow btn__border"
-                            style="margin-top: 60px;">
+                        <ul class="sections__listOuter">
+                            <div>
+                                <li>● ツール：Figma</li>
+                                <li>● 業界：IT</li>
+                                <li>● ボリューム：<br>
+                                    ・PC版 5ページ × 2パターン<br>
+                                    ・SP版 1ページ<br>
+                                </li>
+                            </div>
+                            <div>
+                                <li>● 期間：<br>
+                                    ・打ち合わせ 1週間程<br>
+                                    ・ワイヤーフレーム 3日程度<br>
+                                    ・ビジュアル作成 4日程度<br>
+                                    ・プロトタイプ作成 2日程度</li>
+                            </div>
+
+                        </ul>
+                        <a href="https://www.figma.com/proto/G9McV9bB6fdz2L1oaeH5eE/%E3%83%97%E3%83%AD%E3%83%88%E3%82%BF%E3%82%A4%E3%83%97_works_11_ChatterBox?page-id=0%3A1&node-id=1-453&p=f&viewport=45%2C417%2C0.16&t=cMaZK2hg7N8qu2lY-1&scaling=scale-down&content-scaling=responsive"
+                            target="_blank" class="btn__arrow btn__border" style="margin-top: 60px;">
                             <div>プロトタイプはこちら</div>
-                        </a> -->
+                        </a>
                     </section>
                 </div>
-                <section id="sf" class="sf sections__box">
+                <section id="sf" class="sf sections__box wow animate fadeInUp">
                     <h2>Service flow<span>サービスの流れ</span></h2>
                     <div class="sf__inner">
-                        <div class="sf__item">
+                        <div class="sf__item  wow animate fadeInUp">
                             <div class="sf__img">
                                 <img src="img/sf_1.png" alt="Minalee UIUXデザイナー 制作実績">
                             </div>
@@ -109,7 +121,7 @@
                                 <p class="sf__txt">トップページの入力フォームにAIへの質問を入力します。</p>
                             </div>
                         </div>
-                        <div class="sf__item">
+                        <div class="sf__item  wow animate fadeInUp" data-wow-delay="0.2s">
                             <div class="sf__img">
                                 <img src="img/sf_2.png" alt="Minalee アプリデザイナー 制作実績">
                             </div>
@@ -119,7 +131,7 @@
                                     質問に関する解答を受け取ったり、選択肢を提案されます。</p>
                             </div>
                         </div>
-                        <div class="sf__item">
+                        <div class="sf__item  wow animate fadeInUp" data-wow-delay="0.5s">
                             <div class="sf__img">
                                 <img src="img/sf_3.png" alt="Minalee プロダクトデザイナー 制作実績">
                             </div>
@@ -132,7 +144,7 @@
                     </div>
                 </section>
                 <div class="container">
-                    <section id="solutions" class="pt sections__box">
+                    <section id="solutions" class="pt sections__box wow animate fadeInUp">
                         <h2>Point<span>ポイント</span></h2>
                         <div class="pt__inner">
 
@@ -204,6 +216,9 @@
         });
 
     </script>
+    <!-- wow -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>new WOW().init();</script>
 </body>
 
 </html>

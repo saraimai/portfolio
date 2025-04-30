@@ -16,7 +16,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" defer
         type="text/javascript"></script>
-
+    <!-- wow -->
+    <link rel="stylesheet" href="/common/animate.css" />
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVZ4JNZ2L9"></script>
@@ -65,7 +66,7 @@
     <div class="drawer__bg"></div>
     <main>
         <article>
-            <section id="mv" class="mv">
+            <section id="mv" class="mv wow animate fadeInUp">
                 <div class="container">
                     <div class="mv__inner">
                         <h1 class="mv__logo">ECサイト商品画像作成<br>
@@ -80,22 +81,22 @@
             </section>
             <div class="sections">
                 <div class="container">
-                    <section id="ov" class="ov sections__box">
+                    <section id="ov" class="ov sections__box wow animate fadeInUp">
                         <h2>Overview<span>概要</span></h2>
                         <p class="sections__txt">
                             フリーランスとして、複数のECサイトにおけるデザイン制作を担当しました。<br>
                             新規ストアの立ち上げや、既存ストアの全面リニューアルなど、さまざまなフェーズに携わり、商品フリック画像やLPの制作、商品写真の撮影・レタッチなどを対応。クライアントや取り扱い商品の特性、販売戦略に応じて柔軟にデザインアプローチを変えることで、商品の魅力を最大限に引き出すビジュアル設計を行いました。
                         </p>
-                        <div class="sections__listOuter">
-                            <ul class="sections__list">
-                                <span class="sections__list--ttl">言語・期間など</span>
-                                <li>・デザイン：Photoshop</li>
-                                <li>・言語：HTML , CSS</li>
-                            </ul>
-                        </div>
+                        <ul class="sections__listOuter">
+                            <div>
+                                <li>● 業界：物販 , Eコマース</li>
+                                <li>● ツール：Photoshop</li>
+                                <li>● 言語：HTML , CSS</li>
+                            </div>
+                        </ul>
                     </section>
                     <section>
-                        <div class="sections__box ps__box">
+                        <div class="sections__box ps__box wow animate fadeInUp">
                             <h2>Point<span>ポイント</span></h2>
 
                             <h4 style="padding-top: 0;">クレーム要因を“デメリット”ではなく“価値”に変換</h4>
@@ -162,7 +163,9 @@
         });
 
     </script>
-
+    <!-- wow -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>new WOW().init();</script>
 </body>
 
 </html>

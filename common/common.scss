@@ -401,24 +401,7 @@ section {
       gap: 0;
       margin-left: 20px;
     }
-  }
 
-  &__list {
-    margin-top: 40px;
-
-    &--ttl {
-      background: $pr;
-      padding: 2px 12px;
-      border-radius: 6px;
-      font-weight: bold;
-      color: #FFFFFF;
-      display: inline-block;
-      margin-bottom: 10px;
-    }
-
-    & li {
-      font-weight: bold;
-    }
   }
 }
 
@@ -643,6 +626,7 @@ textarea:-ms-input-placeholder {
   bottom: 0;
   z-index: -1;
   background: $bg40;
+  opacity: 0;
 }
 
 strong {

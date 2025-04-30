@@ -2,6 +2,7 @@ $bg: #F2F7FF;
 $bg40: #F2F7FF66; //40%
 $bg20: #F2F7FF33; //20%
 
+$bg-blue: #F4F9FF;
 $bg-white: #FFFFFF;
 
 $pr: #43A1FF;
@@ -20,6 +21,26 @@ $breakpoints: (
 @mixin mq($breakpoint: sp) {
     @media #{map-get($breakpoints, $breakpoint)} {
         @content;
+    }
+}
+
+
+.sections__listOuter {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 40px 60px;
+    margin: 60px auto 0px;
+    background: $bg-blue;
+    font-size: 14px;
+    flex-wrap: wrap;
+    border-radius: 14px;
+    width: fit-content;
+
+    @include mq() {
+        justify-content: start;
+        padding: 40px 30px;
+        gap: 0px;
     }
 }
 

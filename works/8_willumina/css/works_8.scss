@@ -25,6 +25,24 @@ $breakpoints: (
     }
 }
 
+.sections__listOuter {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 40px 60px;
+    margin: 60px auto 60px;
+    background: $bg-blue;
+    font-size: 14px;
+    flex-wrap: wrap;
+    border-radius: 14px;
+    width: fit-content;
+
+    @include mq() {
+        justify-content: start;
+        padding: 40px 30px;
+        gap: 0px;
+    }
+}
 
 .mv {
     position: fixed;
@@ -89,15 +107,6 @@ $breakpoints: (
 }
 }
 
-.sections__listOuter {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: start;
-    align-items: start;
-    margin: auto;
-    width: fit-content;
-    gap: 0 80px;
-}
 
 .ov {
     margin-top: min(1000px, 101svh);

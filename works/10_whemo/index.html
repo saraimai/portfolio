@@ -16,7 +16,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" defer
         type="text/javascript"></script>
-
+    <!-- wow -->
+    <link rel="stylesheet" href="/common/animate.css" />
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVZ4JNZ2L9"></script>
@@ -65,7 +66,7 @@
     <div class="drawer__bg"></div>
     <main>
         <article>
-            <section id="mv" class="mv">
+            <section id="mv" class="mv wow animate fadeInUp">
                 <div class="container">
                     <div class="mv__inner">
                         <div class="mv__img"> <img src="img/works_fv.png" alt="アプリストア用画像の作成"></div>
@@ -79,27 +80,34 @@
             </section>
             <div class="sections">
                 <div class="container">
-                    <section class="sections__box">
+                    <section class="sections__box wow animate fadeInUp">
                         <div id="ov" class="ov ">
                             <h2>Overview<span>概要</span></h2>
                             <p class="sections__txt">
                                 メモアプリ「Whemo」の、アプリストアに掲載するスクリーンショット、および、フィーチャーグラフィックの制作を担当しました。（アプリのUIデザイン自体は対応していません。）<br>
                                 クライアントから提供された操作画面や文言資料をもとに、ストア閲覧者に向けてアプリの魅力や使い方が端的に伝わるビジュアル構成を行いました。
                             </p>
-                            <div class="sections__listOuter">
-                                <ul class="sections__list">
-                                    <span class="sections__list--ttl">ツールなど</span>
-                                    <li>・デザイン：Figma</li>
-                                </ul>
-                            </div>
+                            <ul class="sections__listOuter">
+                                <div>
+                                    <li>● 業界：IT業界</li>
+                                    <li>● ボリューム：<br>・4枚 × 2ストア<br>・フィーチャーグラフィック1枚 </li>
+                                </div>
+                                <div>
+                                    <li>● デザイン：Figma</li>
+                                    <li>● 期間：<br>
+                                        ・打ち合わせ 3日程度<br>
+                                        ・デザイン 3日程度</li>
+                                </div>
+                            </ul>
                         </div>
                     </section>
                     <section>
-                        <div id="wk" class="sections__box wk">
+                        <div id="wk" class="sections__box wk wow animate fadeInUp">
                             <h2>Point<span>ポイント</span></h2>
                             <div class="sections__txt">
-                                フィーチャーグラフィックでは、インパクトの強さから、共有された紹介文の冒頭1文を引用し、それ以降の文は紹介文に合わせて自ら構成。<strong>フィーチャーグラフィックではユーザーの興味を惹くことを重視し、スクリーンショットでは自然な流れで概要を理解できる構成にしました。</strong><br>
-                                また、提供された素材が限られていたため、キャプチャ画像は加工を行い、ロゴは正式なデータではなく簡易的な画像ファイルでの提供だったため、背景と馴染ませるなどして、自然に見せる工夫を加えています。
+                                フィーチャーグラフィックでは、インパクトの強さを重視。機能紹介のスクリーンショット画像は、クライアント側で用意されたアプリ紹介文に合わせて、自然な流れになるよう構成しました。<br>
+                                これにより、<strong>フィーチャーグラフィックでユーザーの興味を惹き、スクリーンショットで瞬時に概要を理解しやすい構成になっています。</strong><br>
+                                また、提供された素材が限られていたため、キャプチャ画像を加工したり、ロゴを背景と馴染ませるなどして、自然に見せる工夫を加えています。
                             </div>
                             <h4>App store用<br><span>※アプリ自体のデザインは対応していません。</span></h4>
                             <a href="img/ov_1.png" data-lightbox="group"><img src="img/ov_1.png" class="img-top"
@@ -148,8 +156,10 @@
                 $('.logo_fadein').fadeOut(1000);
             }, 200);
         });
-
     </script>
+    <!-- wow -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>new WOW().init();</script>
 
 </body>
 

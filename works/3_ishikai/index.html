@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="/common/common.css">
     <link rel="stylesheet" href="css/works_3.css" media="print" onload="this.media='all'">
     <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
-
+    <!-- wow -->
+    <link rel="stylesheet" href="/common/animate.css" />
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVZ4JNZ2L9"></script>
@@ -59,7 +60,7 @@
     <div class="drawer__bg"></div>
     <main>
         <article>
-            <section id="mv" class="mv">
+            <section id="mv" class="mv wow animate fadeInUp">
                 <div class="container">
                     <div class="mv__inner">
                         <h1 class="mv__logo">京都府医師会様HP
@@ -74,7 +75,7 @@
             </section>
             <div class="sections">
                 <div class="container">
-                    <section id="ov" class="overview sections__box">
+                    <section id="ov" class="overview sections__box wow animate fadeInUp">
                         <h2>Overview<span>概要</span></h2>
                         <p class="sections__txt">
                             京都府医師会の公式サイトのリニューアルプロジェクトにおいて、70ページ以上の大規模サイトの、Topページ〜2階層目、および3階層目の一部コーディングを担当。<br>
@@ -82,13 +83,22 @@
                             また、フルレスポンシブ対応を実施し、PC・タブレット・スマートフォン、どのデバイスからでも快適に利用できるよう配慮しました。<br>
                             プロジェクト進行中は、他社のディレクターさんと当社の担当者との密な連携を取りながら制作。定期的な打ち合わせやフィードバックの共有を通じて、デザインと機能面の調整を行い、クライアントの要望に最適な構成を実現しました。
                         </p>
-                        <div class="sections__listOuter">
-                            <ul class="sections__list">
-                                <span class="sections__list--ttl">ツール・期間など</span>
-                                <li>・使用言語：HTML、CSS(SCSS)、JavaScript</li>
-                                <li>・期間：2ヶ月</li>
-                            </ul>
-                        </div>
+                        <ul class="sections__listOuter">
+                            <div>
+                                <li>● 業界：医療</li>
+                                <li>● 言語：PHP, HTML, SCSS, JavaScript</li>
+                                <li>●︎ ボリューム：約70ページ</li>
+                                <li>● 期間：2ヶ月</li>
+                            </div>
+                            <div style="width: 254px;">
+                                <li>● 体制：<br>
+                                    ・クライアント企業ディレクター 1名<br>
+                                    ・フロントエンドエンジニア 4名程度<br>
+                                    ・ディレクター 1名<br>
+                                </li>
+                            </div>
+
+                        </ul>
                         <a href="https://www.kyoto.med.or.jp/" target="_blank" class="btn__arrow btn__border"
                             style="margin-top: 60px;">
                             <div>実際のサイトはこちら</div>
@@ -96,7 +106,7 @@
                     </section>
                 </div>
                 <div class="container">
-                    <section id="solutions" class="pt sections__box">
+                    <section id="solutions" class="pt sections__box wow animate fadeInUp">
                         <h2>Point<span>ポイント</span></h2>
                         <div class="pt__inner">
                             <p class="sections__txt">
@@ -157,7 +167,9 @@
         });
 
     </script>
-
+    <!-- wow -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>new WOW().init();</script>
 </body>
 
 </html>
