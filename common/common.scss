@@ -152,6 +152,10 @@ header {
     @include mq() {
       padding: 0;
     }
+
+    & a {
+      display: flex;
+    }
   }
 
   &__logo {
