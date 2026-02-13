@@ -90,8 +90,7 @@ header {
   background: rgba(242, 247, 255, 0.4);
   -webkit-filter: drop-shadow(16px 25px 14px rgba(0, 0, 0, 0.1));
           filter: drop-shadow(16px 25px 14px rgba(0, 0, 0, 0.1));
-  -webkit-backdrop-filter: blur(2.5px);
-          backdrop-filter: blur(2.5px);
+  backdrop-filter: blur(2.5px);
   position: fixed;
   top: 20px;
   left: 50%;
@@ -105,8 +104,7 @@ header {
     border: none;
     font: none;
     background: transparent;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
+    backdrop-filter: none;
   }
 }
 .header__inner {
@@ -129,6 +127,11 @@ header {
   .header__inner {
     padding: 0;
   }
+}
+.header__inner a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .header__logo {
   width: 140px;
@@ -246,8 +249,7 @@ header {
     visibility: hidden;
     position: fixed;
     background: rgba(242, 247, 255, 0.4);
-    -webkit-backdrop-filter: blur(6px);
-            backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -647,8 +649,7 @@ textarea:-ms-input-placeholder {
 }
 
 .bg {
-  -webkit-backdrop-filter: blur(26px);
-          backdrop-filter: blur(26px);
+  backdrop-filter: blur(26px);
   width: 100vw;
   height: 100vh;
   position: fixed;

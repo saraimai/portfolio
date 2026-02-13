@@ -340,7 +340,7 @@ $breakpoints: (
 
     &__item {
         text-align: center;
-        height: 240px;
+        width: 170px;
         display: block;
 
         @include mq(sp) {

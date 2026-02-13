@@ -340,7 +340,7 @@
 }
 .rd__item {
   text-align: center;
-  height: 240px;
+  width: 170px;
   display: block;
 }
 @media (max-width: 767px) {
