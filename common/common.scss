@@ -341,7 +341,7 @@ h3 {
 
 h4 {
   font-weight: bold;
-  padding-top: 80px;
+  padding-top: 50px;
   margin-bottom: 6px;
 
   @include mq () {
@@ -383,7 +383,7 @@ section {
 
   &__box {
     background: $bg-white;
-    padding: 0 5% 100px;
+    padding: 0 10% 100px;
     box-shadow: 20px 30px 15px rgba(53, 56, 86, 0.13);
     border-radius: 30px;
 

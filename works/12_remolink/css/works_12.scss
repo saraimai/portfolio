@@ -1,0 +1,282 @@
+$bg: #F2F7FF;
+$bg40: #F2F7FF66; //40%
+$bg20: #F2F7FF33; //20%
+
+$bg-white: #FFFFFF;
+$bg-blue: #F4F9FF;
+
+$pr: #43A1FF;
+
+$tag-color: #777;
+$text-main: #333;
+
+
+$breakpoints: (
+    //キー : 値
+    'sp': "(max-width: 767px)",
+    'tab': "(min-width: 768px) and (max-width: 900px)",
+    'pc': "(min-width: 901px)"
+    ) !default;
+
+
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+.img-top {
+    margin-top: 40px;
+}
+
+
+
+.mv {
+    position: fixed;
+    z-index: -2;
+    width: 100%;
+    top: 0px;
+    height: 700px;
+
+    &__inner {
+        position: relative;
+    }
+
+    &__logo {
+        width: 260px;
+        top: min(50vh, 500px
+        );
+    position: absolute;
+    right: 0%;
+    z-index: 1;
+    font-size: 22px;
+    font-weight: bold;
+
+    @include mq(sp) {
+        top: calc(50svh - 40vw);
+        right: 50%;
+        text-align: center;
+        font-size: 18px;
+        transform: translate(50%, 0);
+    }
+
+}
+
+&__txt {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 2;
+    margin-top: 20px;
+    font-weight: normal;
+
+    @include mq(sp) {
+        padding-left: 0;
+        text-wrap: nowrap;
+        font-size: 10px;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+&__img {
+    top: 100px;
+    left: -11%;
+    width: calc(100% - 145px);
+    max-width: 900px;
+    position: absolute;
+    height: calc(100svh - 50px);
+    max-height: 1000px;
+    background: url(../img/works_fv.png)no-repeat center center/contain;
+    transform: translate(0, 0);
+
+    @include mq(sp) {
+        position: absolute;
+        left: 50%;
+        transform: translate(-55%, -50%);
+        width: 110vw;
+        background-position: center center;
+        max-width: none;
+        height: 100svh;
+        top: calc(50svh + 100px);
+    }
+}
+}
+
+.ov {
+    margin-top: min(1000px, 101svh);
+
+
+    &__fvImg {
+        width: 350px;
+        min-width: 350px;
+
+        @include mq() {
+            display: none;
+        }
+    }
+
+    &__fv {
+        display: flex;
+        flex-direction: row;
+        gap: 5%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+
+        @include mq() {
+            flex-wrap: wrap;
+            padding-left: 0;
+        }
+    }
+
+    &__fvTxt {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @include mq() {
+            gap: 30px;
+        }
+    }
+
+    &__fvLogo {
+        max-width: 300px;
+        padding-top: 20px;
+        width: 80%;
+
+        @include mq() {
+            margin: auto;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 40px 60px;
+        margin: 60px auto 60px;
+        background: $bg-blue;
+        font-size: 14px;
+        flex-wrap: wrap;
+        border-radius: 14px;
+
+        @include mq() {
+            justify-content: start;
+            flex-direction: column;
+            padding: 40px;
+            gap: 0px;
+        }
+    }
+
+    &__target {
+        margin: auto;
+        margin-top: 30px;
+
+    }
+}
+
+h5 {
+    font-weight: bold;
+}
+
+h3 {
+    margin-top: 80px;
+
+    @include mq() {
+        margin-top: 40px;
+    }
+}
+
+
+.ps {
+    padding-top: 100px;
+
+    @include mq() {
+        padding-top: 60px;
+    }
+}
+
+.container {
+    @include mq() {
+        width: 100%;
+    }
+}
+
+.sections__box {
+    @include mq() {
+        border-radius: 0;
+    }
+}
+
+.sections__column {
+    @include mq() {
+        gap: 50px;
+    }
+}
+
+
+
+.att {
+    &__li li {
+        padding-left: 18px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "▶︎";
+            left: 0px;
+            font-size: 10px;
+        }
+    }
+}
+
+.mokuji {
+    border: 1px solid #000;
+    padding: 30px;
+    width: fit-content;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 80px;
+
+    @include mq() {
+        margin-top: 40px;
+    }
+
+    & h3 {
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-size: 20px;
+    }
+
+    & li a {
+        display: block;
+        padding: 3px 20px;
+        width: 240px;
+        margin: auto;
+
+        @include mq() {
+            width: 200px;
+        }
+    }
+}
+
+.onlySP {
+    display: none;
+
+    @include mq() {
+        display: block;
+    }
+}
+
+.onlyPC {
+    display: block;
+
+    @include mq() {
+        display: none;
+    }
+}
+
+
+a[data-lightbox="group"]:hover {
+    opacity: 1;
+}
