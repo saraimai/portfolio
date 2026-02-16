@@ -17,7 +17,7 @@
   width: 300px;
   top: min(50vh, 500px);
   position: absolute;
-  right: 10%;
+  right: 12%;
   z-index: 1;
   font-size: 22px;
   font-weight: bold;
@@ -55,7 +55,7 @@
 }
 .mv__img {
   top: 100px;
-  left: 14%;
+  left: 15%;
   width: calc(100% - 300px);
   max-width: 320px;
   position: absolute;
