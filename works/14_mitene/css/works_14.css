@@ -3,6 +3,20 @@
   margin-top: 40px;
 }
 
+.list-indent {
+  margin: 16px 0;
+}
+.list-indent li {
+  padding-left: 18px;
+  position: relative;
+}
+.list-indent li::before {
+  position: absolute;
+  content: "▶";
+  left: 0px;
+  font-size: 10px;
+}
+
 .mv {
   position: fixed;
   z-index: -2;
