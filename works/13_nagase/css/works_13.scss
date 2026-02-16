@@ -29,7 +29,21 @@ $breakpoints: (
     margin-top: 40px;
 }
 
+.list-indent {
+    margin: 16px 0;
 
+    li {
+        padding-left: 18px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "▶";
+            left: 0px;
+            font-size: 10px;
+        }
+    }
+}
 
 .mv {
     position: fixed;
